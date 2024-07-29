@@ -1,0 +1,83 @@
+#!/usr/bin/perl -w  
+
+use strict;
+use Getopt::Std;
+use lib '/users/rhenwood/ihr/sunspots/perl/external_libs/';
+use lib '../../external_libs/';
+use Statistics::Basic::Mean;
+use Statistics::Basic::StdDev;
+
+
+
+sub usage {
+    print STDERR << "EOF";
+this program generates frechet with a given value
+of a:
+
+-a      : value
+-v      : verbose
+
+example $0 -a 1
+EOF
+    exit;
+}
+
+my %opts = ();
+getopts("a:v", \%opts);
+my $a = 1.0;
+if (!defined($opts{a})) { &usage(); }
+$a = $opts{a};
+
+my $verbose = 0;
+if (defined($opts{v})) { $verbose = 1; }
+
+my $pi = 3.14159;
+my $piOver2 = 1.57079633;
+
+my $totalX = 0;
+my $Xcount = 0;
+my $maxX = 0;
+
+my $FNmean = 0;
+my $FNmax = 0.367879;
+my $FNvariance = 1;
+
+print "finding mean and stdvar... ";
+for (my $i = 0; $i < 100; $i++) {
+    ($FNmean, $FNvariance) = &genFN(0, $FNmean, $FNvariance);
+print "$i found: ";
+printf ("mean = %6f ", $FNmean);
+printf ("stdev = %6f \n", $FNvariance);
+}
+print "found: ";
+printf ("mean = %6f ", $FNmean);
+printf ("stdev = %6f \n", $FNvariance);
+
+&genFN($verbose, $FNmean, $FNvariance);
+
+sub genFN {
+    my ($verbose, $FNmean, $FNvariance) = @_;
+    my @xList = ();
+    my $mean = 0;
+    my $sigma = 1;
+    my $beta = 1;
+    my $eta = 0.5;
+    for (my $i = 0.001; $i < 20; $i += 0.01) {
+        my $z = ($i-$mean)/$sigma;
+        my $Px = ($a/$beta)*($beta/$i)**($a+1)*exp(-(($beta/$i)**$a));
+        my $Ni = ($i - $FNmean)/$FNvariance;
+        my $NPx = $Px*$FNvariance;
+        if ($verbose) {
+            printf "x = %4f ", $i;
+            print "Px = $Px ";
+            print " xminusxbarOverSigma = " . $Ni;
+            print " PxTimesSigma = " . $NPx;
+            print "\n";
+        }
+        push (@xList, $Ni x (100 * $NPx) );
+    }
+    $FNmean = Statistics::Basic::Mean->new(\@xList)->query;
+    $FNvariance = Statistics::Basic::StdDev->new(\@xList)->query;
+    return ($FNmean, $FNvariance)
+}
+

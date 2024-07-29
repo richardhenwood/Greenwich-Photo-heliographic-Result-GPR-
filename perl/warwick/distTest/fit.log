@@ -1,0 +1,763 @@
+
+
+*******************************************************************************
+Wed Apr 11 15:18:50 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(a,b)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Wed Apr 11 15:18:58 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.627389          delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.11004
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.111222
+rel. change during last iteration : -2.23436e-07
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.136151
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.018537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 2.51533          +/- 2.48e+15     (9.859e+16%)
+b               = 1.03061          +/- 1.854e+15    (1.799e+17%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b               1.000  1.000 
+
+
+*******************************************************************************
+Wed Apr 11 15:20:05 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(a,b)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Wed Apr 11 15:20:41 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Apr 11 15:20:51 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Apr 11 15:21:41 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Apr 11 15:21:54 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.111222          delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.144819
+
+initial set of free parameter values
+
+a               = 2.51533
+b               = 1.03061
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.111222
+rel. change during last iteration : -2.9447e-14
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.136151
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.018537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 2.51533          +/- 2.32e+15     (9.222e+16%)
+b               = 1.03061          +/- 1.734e+15    (1.683e+17%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b               1.000  1.000 
+
+
+*******************************************************************************
+Wed Apr 11 15:21:58 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Apr 11 15:22:52 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 47979             delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.144819
+
+initial set of free parameter values
+
+a               = 2.51533
+b               = 1.03061
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:23:11 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:24:12 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:24:52 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 500.000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:24:55 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 500.000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:25:07 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 50.0000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Apr 11 15:25:10 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 50.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:25:18 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:25:37 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 10.0000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Apr 11 15:25:40 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 10.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:26:01 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 10.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:26:17 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 10.0000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Apr 11 15:28:17 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 10.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:28:48 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:29:52 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.627389          delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.11004
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 3 iterations the fit converged.
+final sum of squares of residuals : 0.111222
+rel. change during last iteration : -2.23436e-07
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.136151
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.018537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 2.51533          +/- 2.48e+15     (9.859e+16%)
+b               = 1.03061          +/- 1.854e+15    (1.799e+17%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b               1.000  1.000 
+
+
+*******************************************************************************
+Wed Apr 11 15:29:54 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.111222          delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.144819
+
+initial set of free parameter values
+
+a               = 2.51533
+b               = 1.03061
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.111222
+rel. change during last iteration : -2.9447e-14
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.136151
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.018537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 2.51533          +/- 2.32e+15     (9.222e+16%)
+b               = 1.03061          +/- 1.734e+15    (1.683e+17%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b               1.000  1.000 
+
+
+*******************************************************************************
+Wed Apr 11 15:29:55 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 0.111222          delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.144819
+
+initial set of free parameter values
+
+a               = 2.51533
+b               = 1.03061
+
+After 1 iterations the fit converged.
+final sum of squares of residuals : 0.111222
+rel. change during last iteration : -2.49551e-16
+
+degrees of freedom    (FIT_NDF)                        : 6
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.136151
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.018537
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 2.51533          +/- 1.467e+15    (5.832e+16%)
+b               = 1.03061          +/- 1.097e+15    (1.064e+17%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b               1.000  1.000 
+
+
+*******************************************************************************
+Wed Apr 11 15:30:02 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Apr 11 15:30:12 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Apr 11 15:31:28 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 500.000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 47725.7           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.11004
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:31:31 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 500.000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:31:41 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 500.000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:32:49 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - ' using 3:6
+	x range restricted to [0.00000 : 500.000]
+        #datapoints = 8
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:33:01 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 500.000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 47725.7           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.11004
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:33:15 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 500.000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(a,b)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 47967.8           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 0.00439087
+
+initial set of free parameter values
+
+a               = 10
+b               = 10
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:34:16 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 500.000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(x,b)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:35:07 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 500.000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(r)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Wed Apr 11 15:35:32 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 500.000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(x)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:35:47 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 500.000]
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: poisson(x)
+fitted parameters initialized with current variable values
+
+BREAK:          Undefined value during function evaluation
+
+
+
+*******************************************************************************
+Wed Apr 11 15:36:29 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Apr 11 15:38:39 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Apr 11 15:38:49 2007
+
+
+FIT:    data read from '< cat /users/rhenwood/ihr/data/grnAge/age6.txt /users/rhenwood/ihr/data/grnAge/age7.txt /users/rhenwood/ihr/data/grnAge/age8.txt | /users/rhenwood/ihr/sunspots/perl/warwick/distTest/myBinningCode.pl -f - -x' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+BREAK:          No data to fit 
+
+
+
+*******************************************************************************
+Wed Apr 11 15:39:32 2007
+
+
+FIT:    data read from '/tmp/poissonFit.txt' using 3:6
+	x range restricted to [0.00000 : 30.0000]
+BREAK:          No data to fit 
+

@@ -1,0 +1,3 @@
+for spot: 7304, pairing candidates are:
+7365 y
+7341

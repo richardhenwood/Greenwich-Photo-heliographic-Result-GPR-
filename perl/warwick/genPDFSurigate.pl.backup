@@ -1,0 +1,1075 @@
+#!/usr/bin/perl -w
+
+use POSIX;
+use Data::Dumper;
+use warnings;
+use Math::Trig qw(pi);
+#use Math::Complex qw(log);
+use lib '../../external_libs/';
+use lib '../external_libs/';
+use Statistics::Basic::StdDev;
+use Statistics::Basic::Mean;
+use strict;
+
+# These are values taken from the greenwich dataset.
+#total spots = '29851'
+#max spot stddev = '287.42776427889'
+#max spot mean = 158.141167800074
+#range:     1 ->  6132
+# this is all the greenwich spots
+=begin comment
+my $numberOfPoints = 29851;
+my $stddev = 287.4;
+my $mean = 158.1;
+my $range = 6132;
+# this is only the spots which we see the whole life
+$numberOfPoints = 12677;
+$stddev = 39.1;
+$mean = 24.9;
+$range = 1226;
+# this is for testing purposes.
+$numberOfPoints = 1000;
+$mean = 1;
+$stddev = 1;
+$range = 100;
+=cut comment
+
+&main;
+
+sub main {
+#&normalPDF();
+
+# this section tests the Box Muller method and the averaging method
+#for (my $i = 5; $i < 500; $i += 10) {
+#    $testStddev = $i;
+#&normalBoxM();
+#&normalAv();
+#}
+
+#&logNormalPDF();
+#&normalPDF();
+#&normalBoxM();
+#&logNormalPDF();
+#&logNormalPDFBin();
+my $numberOfPoints = 1000;
+my $mean = 50;
+my $stddev = 5;
+my $range = 500;
+#$numberOfPoints = 1000; $mean = 5; $stddev = 5; $range = 1000;
+my %bins = ();
+my @distributedNos = ();
+my $numberOfBins = 50;
+
+if (0) {
+    srand(42); # this line means we always get the same rand numbers
+    $numberOfBins = 50;
+    &logNormalPDFLinBin($numberOfPoints, $mean, $stddev, $range, $numberOfBins);
+    srand(42); # this line means we always get the same rand numbers
+    $numberOfBins = 50;
+    &logNormalPDFLogBin($numberOfPoints, $mean, $stddev, $range, $numberOfBins);
+    srand(42); # this line means we always get the same rand numbers
+    $numberOfBins = 50;
+    &gumbelPDFLogBin($numberOfPoints, $mean, $stddev, $range, $numberOfBins);
+
+    srand(42); # this line means we always get the same rand numbers
+    &gumbelPDF($numberOfPoints, $mean, $stddev, $range, $numberOfBins);
+}
+
+if (0) {
+for (my $i = 15; $i < 20; $i = $i + 1) {
+    $numberOfPoints = 1000; $mean = 50; $stddev = 5; $range = 100;
+    srand(42); # this line means we always get the same rand numbers
+            # for successive calls of the functions in this loop.
+            
+    &logNormalPDF($numberOfPoints, $mean, $i, $range, $numberOfBins);
+    &gumbelPDF($numberOfPoints, $mean, $i, $range, $numberOfBins);
+#&logNormalPDFBin($numberOfPoints, $mean, $i, $range, $numberOfBins);
+#&logNormalPDFLinBin($numberOfPoints, $mean, $i, $range, $numberOfBins);
+    #&logNormalPDFLogBin($numberOfPoints, $mean, $i, $range, $numberOfBins);
+    #&gumbelPDFLogBin($numberOfPoints, $mean, $i, $range, $numberOfBins);
+}
+}
+
+if (1) {
+$numberOfPoints = 12677; $stddev = 39.1; $mean = 24.9; $range = 1226;
+#$numberOfPoints = 29851; $stddev = 287.4; $mean = 158.1; $range = 6132;
+srand(42); # this line means we always get the same rand numbers
+&logNormalPDF($numberOfPoints, $mean, $stddev, $range, $numberOfBins);
+&gumbelPDF($numberOfPoints, $mean, $stddev, $range, $numberOfBins);
+#&logNormalBoxM();
+}
+
+#&gumbelPDF();
+#&gumbelPDFBin();
+#&gumbelPDFLogBin();
+#&gumbelRand();
+}
+
+
+# in order to generate my surigate function, I first generate
+# some normally distributed numbers with the givens stddev and 
+# mean.
+
+sub normalPDF {
+    my ($numberOfPoints, $mean, $stddev, $range) = @_;
+    print "normalPDF\n";
+    my @normalDist = ();
+    for (my $i = 0; $i < $numberOfPoints; $i++) {
+        my $x = rand($range);
+        $x = ($i / $numberOfPoints) * $range;
+        my $A = 1 / ( $stddev * sqrt( 2 * pi ) );
+        my $P_x = exp(-($x - $mean)**2/(2 * $stddev**2));
+        $P_x = $A * $P_x;
+        push(@normalDist, [$x, $P_x]);
+    }
+    # output the normal dist points
+    foreach my $xRef (@normalDist) { 
+        my ($x, $P_x) = @{$xRef};
+        print "x = $x ";
+        print "P_x = $P_x ";
+        print "\n";
+    }
+    print "\n\n";
+}
+
+# now, this function generates random, normalised normal numbers.
+sub normalBoxM {
+    my ($numberOfPoints, $mean, $stddev, $range, $numberOfBins, $binWidth) = @_;
+    print "normalBoxM\n";
+    my @normalBoxMuller = &normalBoxMuller($numberOfPoints, $mean, $stddev);
+
+# so now count them into bins;
+    my %normalDistBins = ();
+    foreach my $normValue (@normalBoxMuller) {
+        my $bin = ($binWidth/2)+$binWidth * floor($normValue / $binWidth);
+        push(@{$normalDistBins{$bin}}, $normValue);
+    }
+    foreach my $binName (sort numeric keys %normalDistBins) {
+        print "bin = $binName ";
+        my $P_x = scalar @{$normalDistBins{$binName}} / ($numberOfPoints * $binWidth);
+        print " p_x = $P_x ";
+        print "\n";
+    }
+    print "\n\n";
+}
+
+# this is my log normal distribution pdf, binned
+# P(x) = 1/sigma sqrt(2) pi x * e^(ln x - mu)/(2 sigma)^2
+sub logNormalPDFBin {
+    my ($numberOfPoints, $mean, $stddev, $range, $numberOfBins) = @_;
+    print "logNormalPDFBin\n";
+    print "no of points : $numberOfPoints mean $mean, stdev $stddev\n";
+    my $logNormalPeak = getLogNormalPeak($mean, $stddev, $range);
+    my %logNormalDistBins = ();
+    my $preTotal = 0;
+    my $binWidth = $range/$numberOfBins; 
+    my $i = 0;
+    while ($i < $numberOfPoints) {
+        my $x = rand($range);
+        my $y = rand($logNormalPeak);
+        my $A = 1 / ($stddev * sqrt( 2 * pi ) * $x);
+        my $P_x = exp (-((log($x/$mean))**2/(2 * $stddev**2)));
+        $P_x = $A * $P_x;
+                    
+        if ($y < $P_x) {
+            my $normValue = $P_x;
+            my $bin = ($binWidth/2)+$binWidth * floor($x / $binWidth);# - exp($mean);
+            push(@{$logNormalDistBins{$bin}}, $normValue);
+            $i++;
+            #print "bin = $bin normvalue = $normValue \n";
+        }
+    }
+    my $total = 0;
+    foreach my $binName (sort numeric keys %logNormalDistBins) {
+        print "bin = $binName ";
+        my $P_x = scalar @{$logNormalDistBins{$binName}} / ($numberOfPoints);# * $binWidth);
+        print " p_x = $P_x ";
+        $total += $P_x;
+        print "\n";
+    }
+    print "total = $total\n";
+    print "\n\n";
+}
+# this is my log normal distribution pdf, binned in linear bins
+# P(x) = 1/sigma sqrt(2) pi x * e^(ln x - mu)/(2 sigma)^2
+sub logNormalPDFLinBin {
+    my ($numberOfPoints, $mean, $stddev, $range, $numberOfBins) = @_;
+    print "logNormalPDFLinBin\n";
+    print "no of points : $numberOfPoints mean $mean, stdev $stddev bins $numberOfBins\n";
+    my $logNormalPeak = getLogNormalPeak($mean, $stddev, $range);
+    my %logNormalDistBins = ();
+    my $binWidth = $range/$numberOfBins;
+    my $i = 0;
+
+    while ($i < $numberOfPoints) {
+        my $x = rand($range);
+        my $y = rand($logNormalPeak);
+        my $A = 1 / ($stddev * sqrt( 2 * pi ) * $x);
+        my $P_x = exp (-((log($x/$mean))**2/(2 * $stddev**2)));
+        $P_x = $A * $P_x;
+                    
+        if ($y < $P_x ) {
+            my $normValue = $P_x;
+            #$x = ($x - $mean)/$stddev;
+            my $bin = ($binWidth/2)+$binWidth * floor($x / $binWidth);# - exp($mean);
+            #print "bin = $bin normvalue = $normValue\n";
+            push(@{$logNormalDistBins{$bin}}, $normValue);
+            $i++;
+        }
+    }
+    PDFLinearOutput(\%logNormalDistBins, $numberOfPoints, $mean, $stddev, $range, $numberOfBins);
+}
+# this is my log normal distribution pdf, binned in log bins
+# P(x) = 1/sigma sqrt(2) pi x * e^(ln x - mu)/(2 sigma)^2
+sub logNormalPDFLogBin {
+    my ($numberOfPoints, $mean, $stddev, $range, $numberOfBins) = @_;
+    print "logNormalPDFLogBin\n";
+    print "no of points : $numberOfPoints mean $mean, stdev $stddev bins $numberOfBins range $range\n";
+    my $logNormalPeak = getLogNormalPeak($mean, $stddev, $range);
+    my %logNormalDistBins = ();
+    my $i = 0;
+    while ($i < $numberOfPoints) {
+        my $x = rand($range)  + 1;
+        my $y = rand($logNormalPeak);
+        my $A = 1 / ($stddev * sqrt( 2 * pi ) * $x);
+        my $P_x = exp (-((log($x/$mean))**2/(2 * $stddev**2)));
+        $P_x = $A * $P_x;
+                    
+        if ($y < $P_x ) {
+            my $normValue = $P_x;
+# now try and do a transform on the data
+#            $normValue = $normValue * $stddev;        
+            #   $x = ($x - $mean) / $stddev;
+# now put in the relevant bin.
+            my $bin = $range * $numberOfBins**((floor($numberOfBins * (log($x)/log($range))))/$numberOfBins)/$numberOfBins;
+            #        print "bin = $bin normvalue = $normValue\n";
+            push(@{$logNormalDistBins{$bin}}, $normValue);
+            $i++;
+        }
+    }
+    #print Dumper %logNormalDistBins;
+    #PDFLogOutput(\%logNormalDistBins, $numberOfPoints, $mean, $stddev, $range, $numberOfBins);
+    PDFLinearOutput(\%logNormalDistBins, $numberOfPoints, $mean, $stddev, $range, $numberOfBins);
+}
+# this is a gumbel pdf implementation binned in log bins;
+# p_x = 1/sigma * e^(-e^((x-mu)/sigma));
+sub gumbelPDFLogBin {
+    my ($numberOfPoints, $mean, $stddev, $range, $numberOfBins, $binWidth) = @_;
+    print "gumbelPDFLogBin\n";
+    print "no of points : $numberOfPoints mean $mean, stdev $stddev bins $numberOfBins\n";
+    my $gumbelPeak = getGumbelPeak($mean, $stddev, $range);
+    my %gumbelDistLogBins = ();
+    my $i = 0;
+    my $scale = (sqrt(6) * $stddev) / pi;
+    my $mode = $mean + (-0.577216 * $scale); 
+    while ($i < $numberOfPoints) {
+        my $x = rand($range) + 1;
+        my $y = rand($gumbelPeak);
+        #my $A = 1 / ($stddev);
+        my $A = 1 / ($scale);
+        my $f_x = exp(-($x - $mode)/$scale) * exp(-exp(-($x - $mode)/$scale));
+        #my $A = 1 / ($stddev * sqrt( 2 * pi ) * $x);
+        #my $f_x = exp(-($x - $mean)/$stddev) * exp(-exp(-($x - $mean)/$stddev));
+        $f_x = $A * $f_x;
+
+        if ($y < $f_x) {
+            my $normValue = $f_x;
+            #my $bin = ceil($numberOfBins * (log($x)/log($range)));
+            my $bin = $range * $numberOfBins**((floor($numberOfBins * (log($x)/log($range))))/$numberOfBins)/$numberOfBins;
+            #print "bin = $bin normvalue = $normValue\n";
+            push(@{$gumbelDistLogBins{$bin}}, $normValue);
+            $i++;
+        }
+    }
+    PDFLinearOutput(\%gumbelDistLogBins, $numberOfPoints, $mean, $stddev, $range, $numberOfBins);
+    #PDFLogOutput(\%gumbelDistLogBins, $numberOfPoints, $mean, $stddev, $range, $numberOfBins, $binWidth);
+}
+sub PDFLinearOutput {
+    my ($PDFDistLinBinsRef, $numberOfPoints, $mean, $stddev, $range, $numberOfBins) = @_;
+    my %PDFDistLinBins = %{$PDFDistLinBinsRef};
+    #print Dumper %PDFDistLinBins;
+    my $total = 0;
+    my $numTotal = 0;
+    my $areaTotal = 0;
+    foreach my $binName (sort numeric keys %PDFDistLinBins) {
+        print " BinName = $binName ";
+        
+        my $binContents = scalar @{$PDFDistLinBins{$binName}};
+        $total += $binContents;
+        $binContents = $binContents / $numberOfPoints;
+        $areaTotal += $binContents;
+        print " contents = $binContents ";
+
+        my $error = 1 / sqrt ($numberOfPoints);
+        print " error = $error ";
+        print "\n";
+        
+    }
+    print "bin contents total $total numtotal = $numTotal areatotal = $areaTotal\n";
+    print "\n\n";
+}
+sub PDFLogOutput {
+    my ($PDFDistLogBinsRef, $numberOfPoints, $mean, $stddev, $range, $numberOfBins, $binWidth) = @_;
+    my %PDFDistLogBins = %{$PDFDistLogBinsRef};
+    my $total = 0;
+    my $numTotal = 0;
+    my $areaTotal = 0;
+    foreach my $binName (sort numeric keys %PDFDistLogBins) {
+        my $sum = 0;
+        my $logBinWidth = ($range**($binName/$numberOfBins) - $range**(($binName-1)/$numberOfBins));
+        my $binPosition = $range**(($binName-1)/$numberOfBins) + 0.5*$logBinWidth;
+        print " bin = ". $binPosition .  " ";
+        print " normBin = " . ($binPosition / $stddev) ;
+        my $P_x = scalar @{$PDFDistLogBins{$binName}} / ($numberOfPoints * $logBinWidth);
+
+# now try and do a transform on the data
+#        $P_x = $P_x * $stddev;
+        $areaTotal += $logBinWidth * $P_x;
+        print " p_x = $P_x ";
+        $total += $P_x;
+#        print " num = " . scalar @{$PDFDistLogBins{$binName}};
+        print " normNum = " . scalar @{$PDFDistLogBins{$binName}} * $stddev;
+        $numTotal += scalar @{$PDFDistLogBins{$binName}}; 
+#        print " bin = $binName ";
+        print " error = " . (1/sqrt($numberOfPoints)); #(1/sqrt(@{$PDFDistLogBins{$binName}}));
+        print "\n";
+    }
+    print "total  $total numtotal = $numTotal areatotal = $areaTotal\n";
+    print "\n\n";
+}
+# this is my log normal distribution pdf, binned in log bins
+# P(x) = 1/sigma sqrt(2) pi x * e^(ln x - mu)/(2 sigma)^2
+sub myOld_logNormalPDFLogBin {
+    my ($numberOfPoints, $mean, $stddev, $range, $numberOfBins, $binWidth) = @_;
+
+    print "myOld_logNormalPDFLogBin\n";
+    #print Dumper @_;
+    print "no of points : $numberOfPoints mean $mean, stdev $stddev\n";
+    my %logNormalDistBins = ();
+    for (my $i = 1; $i <= $numberOfPoints; $i++) {
+        my $x = rand($range - $mean) + $mean;
+        $x = rand($range);
+        my $A = 1 / ($stddev * sqrt( 2 * pi ) * $x);
+        my $P_x = exp (-((log($x/$mean))**2/(2 * $stddev**2)));
+        $P_x = $A * $P_x;
+                    
+# now try and do a transform on the data
+        my $normValue = $P_x;
+#        $normValue = ($normValue / $stddev) - ($mean / $stddev);        
+     $normValue = $normValue * $stddev;        
+        $x = $x / $stddev;
+        my $bin = ceil($numberOfBins * (log($x)/log($range)));
+        push(@{$logNormalDistBins{$bin}}, $normValue);
+    }
+    my $total = 0;
+    foreach my $binName (sort numeric keys %logNormalDistBins) {
+        my $sum = 0;
+        my $logBinWidth = ($range**($binName/$numberOfBins) - $range**(($binName-1)/$numberOfBins));
+        my $binPosition = $range**(($binName-1)/$numberOfBins) + 0.5*$logBinWidth;
+        $sum += $_ for @{$logNormalDistBins{$binName}};
+        my $height = $sum;
+        $sum = $sum / ($numberOfPoints * $logBinWidth);
+        print "bin = $binPosition ";
+        my $P_x = scalar @{$logNormalDistBins{$binName}} / ($numberOfPoints * $logBinWidth);
+
+# now try and do a transform on the data
+#        $P_x = $P_x * $stddev;
+        print " p_x = $P_x ";
+        $total += $logBinWidth * $height;
+#        $sum = $sum / $stddev;
+        print " sum = $sum ";
+        print " num = " . scalar @{$logNormalDistBins{$binName}};
+        #    my $stdError = sqrt(Statistics::Basic::StdDev->new(\@{$logNormalDistBins{$binName}})->query);
+        #print " stderr = $stdError"; 
+        print "\n";
+    }
+    print "total = $total\n";
+    print "\n\n";
+}
+sub logNormalPDF {
+    my ($numberOfPoints, $mean, $stddev, $range) = @_;
+    print "logNormalPDF\n";
+    for (my $i = 1; $i < $numberOfPoints; $i++) {
+        my $x = ($i / $numberOfPoints) * $range;
+        my $f_x = &logNormalPDFvalue($x, $mean, $stddev);
+        print "x = $x ";
+        print "P_x = $f_x ";
+        print "\n";
+    }
+    print "\n\n";
+}    
+sub gumbelPDF {
+    my ($numberOfPoints, $mean, $stddev, $range) = @_;
+    print "gumbel\n";
+    for (my $i = -100; $i < $numberOfPoints; $i++) {
+        my $x = ($i / $numberOfPoints) * $range;
+        my $f_x = &gumbelPDFvalue($x, $mean, $stddev);
+        print "x = $x ";
+        print "P_x = $f_x ";
+        print "\n";
+    }
+    print "\n\n";
+}    
+# this is my log normal distribution :
+sub logNormalPDFvalue {
+    my ($x, $mean, $stddev) = @_;
+    my $S = sqrt(log(($stddev**2 + exp(2 * log($mean)))/exp(2 * log($mean))));
+    my $M = (2 * log($mean) - $S**2)/2; 
+    my $A = 1 / ($S * sqrt( 2 * pi ) * $x);
+    my $P_x = exp (-((log($x)-$M)**2/(2 * $S**2)));
+    $P_x = $A * $P_x;
+    return $P_x;
+}
+# this is a gumbel pdf implementation;
+sub gumbelPDFvalue {
+    my ($x, $mean, $stddev) = @_;
+    my $beta = ($stddev * sqrt(6)) / pi;
+    my $mu = $mean - (0.5772 * $beta);
+    my $A = 1 / $beta;
+    my $f_x = exp(($x - $mu)/$beta) * exp(-exp(($x - $mu)/$beta));
+    $f_x = $A * $f_x;
+    return $f_x;
+}
+# this is a gumbel pdf implementation binned;
+# p_x = 1/sigma * e^(-e^((x-mu)/sigma));
+sub gumbelPDFBin {
+    my ($numberOfPoints, $mean, $stddev, $range, $numberOfBins, $binWidth) = @_;
+    print "gumbelPDFBin\n";
+    my %gumbelDistBins = ();
+    for (my $i = 0; $i < $numberOfPoints; $i++) {
+        my $x = rand($range - $mean) + $mean;
+        $x = rand($range);
+        $x = ($i / $numberOfPoints) * $range;
+        my $A = 1 / ($stddev);
+        my $f_x = exp(-($x - $mean)/$stddev) * exp(-exp(-($x - $mean)/$stddev));
+        $f_x = $A * $f_x;
+
+        my $normValue = $f_x;
+        my $bin = ($binWidth/2)+$binWidth * floor($x / $binWidth);# - exp($mean);
+        push(@{$gumbelDistBins{$bin}}, $normValue);
+    }
+    foreach my $binName (sort numeric keys %gumbelDistBins) {
+        my $sum = 0;
+        $sum += $_ for @{$gumbelDistBins{$binName}};
+        $sum = $sum / ($numberOfPoints * $binWidth);
+        print "bin = $binName ";
+        my $P_x = scalar @{$gumbelDistBins{$binName}} / ($numberOfPoints * $binWidth);
+        print " p_x = $P_x ";
+        print " sum = $sum ";
+        #    my $stdError = sqrt(Statistics::Basic::StdDev->new(\@{$logNormalDistBins{$binName}})->query);
+        #print " stderr = $stdError"; 
+        print "\n";
+    }
+    print "\n\n";
+}
+# this is a gumbel pdf implementation binned in log bins;
+# p_x = 1/sigma * e^(-e^((x-mu)/sigma));
+sub myOld_gumbelPDFLogBin {
+    my ($numberOfPoints, $mean, $stddev, $range, $numberOfBins, $binWidth) = @_;
+    print "gumbelPDFLogBin\n";
+    my %gumbelDistLogBins = ();
+    for (my $i = 0; $i < $numberOfPoints; $i++) {
+        my $x = rand($range - $mean) + $mean;
+        $x = rand($range);
+        my $A = 1 / ($stddev);
+        my $f_x = exp(-($x - $mean)/$stddev) * exp(-exp(-($x - $mean)/$stddev));
+        $f_x = $A * $f_x;
+
+        my $normValue = $f_x;
+        my $bin = ceil($numberOfBins * (log($x)/log($range)));
+        push(@{$gumbelDistLogBins{$bin}}, $normValue);
+    }
+    foreach my $binName (sort numeric keys %gumbelDistLogBins) {
+        my $sum = 0;
+        my $logBinWidth = ($range**($binName/$numberOfBins) - $range**(($binName-1)/$numberOfBins));
+        my $binPosition = $range**(($binName-1)/$numberOfBins) + 0.5*$logBinWidth;
+        $sum += $_ for @{$gumbelDistLogBins{$binName}};
+        $sum = $sum / ($numberOfPoints * $logBinWidth);
+        print "bin = $binPosition ";
+        my $P_x = scalar @{$gumbelDistLogBins{$binName}} / ($numberOfPoints * $logBinWidth);
+        print " p_x = $P_x ";
+        print " sum = $sum ";
+        #    my $stdError = sqrt(Statistics::Basic::StdDev->new(\@{$logNormalDistBins{$binName}})->query);
+        #print " stderr = $stdError"; 
+        print "\n";
+    }
+    print "\n\n";
+}
+
+sub gumbelBoxM {
+    my ($numberOfPoints, $mean, $stddev, $range, $numberOfBins, $binWidth) = @_;
+    print "gumbelboxM\n";
+    my %normalDistBins = ();
+    my $gumbelSetSize = 16;
+    my @gumbelSet = ();
+    my $totalNumberOfPoints = 0;
+    while ($totalNumberOfPoints < $numberOfPoints) {
+        my @randNorms = &normalBoxMuller($gumbelSetSize, $mean, $stddev );#/ $gumbelSetSize );
+        my $largest = (sort numeric @randNorms)[-1];
+        #    print "binwidth '$binWidth' array = " . join(', ', @randNorms);
+        #      print " largest = '$largest' \n";
+        
+        my $bin = ($binWidth/2)+$binWidth * floor($largest / $binWidth);
+        push(@{$normalDistBins{$bin}}, $largest);
+        $totalNumberOfPoints++;
+    }
+    foreach my $binName (sort numeric keys %normalDistBins) {
+        print "bin = $binName ";
+        my $P_x = scalar @{$normalDistBins{$binName}} / ($totalNumberOfPoints * $binWidth);
+        print " p_x = $P_x ";
+        print "\n";
+    }
+    print "\n\n";
+    print "totalnumber = $totalNumberOfPoints\n";
+}
+
+# this function generates random, normalised gumbel numbers.
+sub gumbelBoxMOld {
+    my ($numberOfPoints, $mean, $stddev, $range, $numberOfBins, $binWidth) = @_;
+    #my $range = 10;
+    
+# so now count them into bins;
+    my %normalDistBins = ();
+    my $gumbelSetSize = 4;
+    my @gumbelSet = ();
+#    my $binWidth = 0.1;
+    my $count = 1;
+    my $totalNumberOfPoints = 0;
+    while ($totalNumberOfPoints < $numberOfPoints) {
+        my @normalRandom = &normalBoxMuller($numberOfPoints, $mean, $stddev);# * ($gumbelSetSize-1));
+        foreach my $normValue (@normalRandom) {
+            if ($count % $gumbelSetSize == 0) {
+                my $largest = (sort numeric @gumbelSet)[-1];
+                #    print " array = " . join(', ', @gumbelSet);
+                #print " largest = '$largest' \n";
+                @gumbelSet = ();
+                my $bin = ($binWidth/2)+$binWidth * floor($largest / $binWidth);
+                push(@{$normalDistBins{$bin}}, $normValue);
+                $totalNumberOfPoints++;
+            }
+            $count++;
+            push(@gumbelSet, $normValue);
+        }
+    }
+    foreach my $binName (sort numeric keys %normalDistBins) {
+        print "bin = $binName ";
+        my $P_x = scalar @{$normalDistBins{$binName}};# / ($totalNumberOfPoints * $binWidth);
+        print " p_x = $P_x ";
+        print "\n";
+    }
+    print "\n\n";
+    print "totalnumber = $totalNumberOfPoints\n";
+}
+
+# this function get the height of the tallest peak on a log normal distn
+sub getLogNormalPeak {
+    my ($mean, $stddev, $range) = @_;
+    my $numberOfPoints = 1000;
+    my $peakValue = 0;
+    for (my $i = 1; $i <= $numberOfPoints; $i++) {
+        my $x = ($i / $numberOfPoints) * $range;
+        my $A = 1 / ($stddev * sqrt( 2 * pi ) * $x);
+        my $P_x = exp (-((log($x/$mean))**2/(2 * $stddev**2)));
+        $P_x = $A * $P_x;
+
+        if ($P_x > $peakValue) {
+            $peakValue = $P_x;
+        }
+    }
+    return $peakValue;
+}
+sub getGumbelPeak {
+    my ($mean, $stddev, $range) = @_;
+    my $numberOfPoints = 1000;
+    my $peakValue = 0;
+    my $scale = (sqrt(6) * $stddev) / pi;
+    my $mode = $mean + (-0.577216 * $scale);
+    for (my $i = 0; $i < $numberOfPoints; $i++) {
+        
+        my $x = ($i / $numberOfPoints) * $range;
+        my $A = 1 / ($scale);
+        my $f_x = exp(-($x - $mode)/$scale) * exp(-exp(-($x - $mode)/$scale));
+        $f_x = $A * $f_x;
+
+        if ($f_x > $peakValue) {
+            $peakValue = $f_x;
+        }
+    }
+    return $peakValue;
+}
+sub numeric {
+    $a <=> $b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin oldcode
+
+
+
+sub getRands {
+    my ($number, $range) = @_;
+    my @rndArray = ();
+    for (my $i = 0; $i < $number; $i++) {
+        push(@rndArray, rand($range));
+    }
+    return @rndArray;
+}
+
+# this function generates a an array of normally distributed random numbers
+# this is generated using the box muller method.
+sub normalBoxMuller {                                            
+    my ($numberOfPoints, $mean, $stddev, $range) = @_;
+    my @normalArray = ();
+    for (my $i = 0; $i < $numberOfPoints; $i ++ )  {                    
+        push(@normalArray, rand);
+    }
+
+    for (my $i = 0; $i < $numberOfPoints; $i += 2 )  {                    
+        my $z1 = sqrt( -2.0 * log( $normalArray[$i] ) ) * cos( 2.0 * pi * $normalArray[$i+1] );
+        my $z2 = sqrt( -2.0 * log( $normalArray[$i] ) ) * sin( 2.0 * pi * $normalArray[$i+1] );                    
+        $normalArray[$i] = ( $z1 * $stddev ) + $mean;                            
+        $normalArray[$i+1] = ( $z2 * $stddev ) + $mean;                        
+    }                                                                
+    return @normalArray;
+}               
+    
+sub numeric {
+    $a <=> $b;
+}
+
+# this is my method to generate norma numbers with a given std and mean
+sub normalAvArray {
+    my ($numberOfPoints, $mean, $stddev) = @_;
+    my @normalArray = ();
+    my $setSize = 10;
+    my %normalDistBins = ();
+    my $range = $stddev * $setSize * 1/(2*sqrt(2)); # it made this range scaling up.
+    for (my $i = 1; $i <= $numberOfPoints; $i++) {
+        my $setTotal = 0;
+        for (my $i = 0; $i < $setSize; $i++) {
+            $setTotal += rand;
+        }
+        my $value = ($setTotal / $setSize)  - 0.5;
+        $value = ($value * $stddev * sqrt(12 * $setSize)) + $mean;
+        push(@normalArray, $value);
+    }
+    return @normalArray;
+}
+
+sub normalPDFMangled {
+    my @normalDist = ();
+    my @logNormalDist = ();
+    my $numberInLogNormalDist = 1;
+    my $mean = 1;
+    my $sigma = 1;
+    for (my $i = 0; $i < $numberOfPoints; $i++) {
+        my $x = rand($range);
+        $x = ($i / $numberOfPoints) * $range;
+        my $A = 1 / ( sqrt( 2 * pi * ($sigma**2)));
+        my $P_x = exp(-($x - $mean)**2/(2 * $sigma**2));
+        $P_x = $A * $P_x;
+        push(@normalDist, [$x, $P_x]);
+
+        if (0) {
+        my $PN_x = 1;
+        for (my $j = 0; $j < $numberInLogNormalDist; $j++) {
+            #$x = rand(10) - 4;
+            $A = 1 / ( sqrt( 2 * pi * ($sigma**2)) * $x);
+            $P_x = exp(-($x - $mean)**2/(2 * $sigma**2));
+            $P_x = $A * $P_x;
+            $PN_x = $PN_x * exp($P_x); 
+            
+        }
+        if ($PN_x == 0) {
+            print "pnx = 0";
+        }
+            push(@logNormalDist, [$x, $PN_x]);
+            #}
+            #else {
+                #push(@logNormalDist, [$x, 0]);
+            #}
+        }
+    }
+    # output the normal dist points
+    foreach my $xRef (@normalDist) { 
+        my ($x, $P_x) = @{$xRef};
+        print "x = $x ";
+        print "P_x = $P_x ";
+        print "\n";
+    }
+    print "\n\n";
+}
+sub normalBoxMMangled {
+    my @normalRandom = &normalBoxMuller($numberOfPoints, $testMean, $testStddev);
+
+# so now count them into bins;
+    my %normalDistBins = ();
+    my $totalNumberOfPoints = 0;
+    my @avSet = ();
+    foreach my $normValue (@normalRandom) {
+        if ($normValue > 0) {
+            my $bin = ($binWidth/2)+$binWidth * floor($normValue / $binWidth);
+            push(@{$normalDistBins{$bin}}, $normValue);
+            push(@avSet, $normValue);
+            $totalNumberOfPoints++;
+        }
+    }
+    if (0) {
+    foreach my $binName (sort numeric keys %normalDistBins) {
+        print "bin = $binName ";
+        my $P_x = scalar @{$normalDistBins{$binName}} / ($totalNumberOfPoints * $binWidth);
+        print " p_x = $P_x ";
+        print "\n";
+    }
+}
+    print "mean = $testMean stddev = $testStddev ";
+    print "mean " . Statistics::Basic::Mean->new(\@avSet)->query;
+    print " stdev " . Statistics::Basic::StdDev->new(\@avSet)->query;
+##    print "\n";
+##    print "\n\n";
+}
+sub logNormalPDFMangled {
+    for (my $i = 1; $i <= $numberOfPoints; $i++) {
+        my $x = rand($range - $mean) + $mean;
+        $x = rand($range);
+        $x = ($i / $numberOfPoints) * $range;
+        my $A = 1 / ( sqrt( 2 * pi * ($stddev**2)) * $x);
+        my $P_x = exp ( 0 - (((log($x/$mean))**2)/(2*($stddev**2))));
+        $P_x = $A * $P_x;
+        print "x = $x ";
+        print "P_x = $P_x ";
+        print "\n";
+    }
+    print "\n\n";
+}
+# this is a function I use to generate normally distributed random nubmers.
+# it uses the averaging of a number of numbers method.
+# I have modified it with my own random number range scaling factor so
+# I can control the standard deviation of the resulting normal numbers.
+sub normalAv {
+    my $range = 10;
+    my @normalRandom = &normalAvArray($numberOfPoints, $testMean, $testStddev);
+
+# so now count them into bins;
+    my %normalDistBins = ();
+    my $binWidth = 0.1;
+    my $totalNumberOfPoints = 0;
+    my @avSet = ();
+    foreach my $normValue (@normalRandom) {
+        if ($normValue > 0) {
+            my $bin = ($binWidth/2)+$binWidth * floor($normValue / $binWidth);
+            push(@{$normalDistBins{$bin}}, $normValue);
+            push(@avSet, $normValue);
+            $totalNumberOfPoints++;
+        }
+    }
+    if (0) {
+    foreach my $binName (sort numeric keys %normalDistBins) {
+        print "bin = $binName ";
+        my $P_x = scalar @{$normalDistBins{$binName}} / ($totalNumberOfPoints * $binWidth);
+        print " p_x = $P_x ";
+        print "\n";
+    }
+}
+    print " avmean " . Statistics::Basic::Mean->new(\@avSet)->query;
+    print " avstdev " . Statistics::Basic::StdDev->new(\@avSet)->query;
+    print "\n";
+}
+
+
+sub normalAvold {
+    my $mean = $testMean;
+    my $stddev = $testStddev;
+    my @avSet = ();
+    my $setSize = 10;
+    my %normalDistBins = ();
+    my $binWidth = 1/$setSize;
+    my $range = $stddev * $setSize * 1/(2*sqrt(2)); # it made this range scaling up.
+    for (my $i = 1; $i <= $numberOfPoints; $i++) {
+        my $setTotal = 0;
+        my $x = 0;
+        for (my $i = 0; $i < $setSize; $i++) {
+            $x = rand($range) + $mean - $range/2;
+            #$x = rand;
+            $setTotal += $x;
+        }
+        my $bin = ($binWidth/2)+$binWidth * floor($setTotal / ($setSize * $binWidth));
+        push(@{$normalDistBins{$bin}}, $setTotal/$setSize);
+        push(@avSet, $x);
+    }
+    if (0) {
+    foreach my $binName (sort numeric keys %normalDistBins) {
+        print "bin = $binName ";
+        my $P_x = scalar @{$normalDistBins{$binName}} / ($numberOfPoints * $binWidth);
+        print " p_x = $P_x ";
+        print "\n";
+    }
+}
+    print " avmean " . Statistics::Basic::Mean->new(\@avSet)->query;
+    print " avstdev " . Statistics::Basic::StdDev->new(\@avSet)->query;
+    print "\n";
+#    print "\n\n";
+}
+# and, this function generates random, normalised log-normal numbers.
+sub logNormalBoxMmangled { 
+    #my $range = 10;
+    my @normalRandom = &normalBoxMuller($numberOfPoints, $mean, $stddev);
+
+# so now count them into bins;
+    my %normalDistBins = ();
+    #my $numberOfBins = 20;
+#    my $binWidth = 1;
+    my $totalNumberOfPoints = 0;
+    my %logDistBins = ();
+    foreach my $normValue (@normalRandom) {
+#              print "normvlaue = $normValue ";
+$normValue = exp($normValue);
+        my $bin = ($binWidth/2)+$binWidth * floor($normValue / $binWidth);
+               print "binnumber = $bin normvalue = $normValue\n";
+        push(@{$normalDistBins{$bin}}, $normValue);
+        push(@{$logDistBins{ceil(10**$normValue)/$numberOfBins}}, $normValue);
+        $totalNumberOfPoints++;
+    }
+    foreach my $binName (sort numeric keys %normalDistBins) {
+        print "bin = $binName ";
+        my $P_x = scalar @{$normalDistBins{$binName}} / ($totalNumberOfPoints * $binWidth);
+        print " p_x = $P_x ";
+        print "\n";
+    }
+    print "\n\n";
+    #   foreach my $binName (sort numeric keys %logDistBins) {
+        #    print "bin = $binName ";
+        #    my $P_x = scalar @{$logDistBins{$binName}};# / ($totalNumberOfPoints * $binWidth);
+        #    print " p_x = $P_x ";
+        #    print "\n";
+        #}
+        #'print "\n\n";
+        #print Dumper %logDistBins;
+}
+
+
+# this binning technique dosen't work. 
+sub logNormalPDFbinned {
+    my %logNormalDistBins = ();
+    my %logDistBins = ();
+    for (my $i = 1; $i <= $numberOfPoints; $i++) {
+        my $x = rand($range - $mean) + $mean;
+        $x = rand($range);
+        $x = ($i / $numberOfPoints) * $range;
+
+        my $A = 1 / ( sqrt( 2 * pi * ($stddev**2)) * $x);
+        my $P_x = exp ( 0 - (((log($x/$mean))**2)/(2*($stddev**2))));
+        $P_x = $A * $P_x;
+
+        # now put the numbers in bins.
+        # linear bins in this case:
+        #my $binName = ($binWidth/2)+$binWidth * floor($x / $binWidth);
+        my $binName = floor($x/$binWidth)/$binWidth + $binWidth/2;
+        push(@{$logNormalDistBins{$binName}}, $P_x * $x);
+        # log bins in this case:
+        my $logNormValue = $P_x * $x;
+        my $logBinName = ceil($numberOfBins**($x/$range));
+        push(@{$logDistBins{$logBinName}}, $logNormValue);
+
+    }
+# kk    
+    foreach my $binName (sort numeric keys %logNormalDistBins) {
+        print "bin = $binName ";
+        my $sum = 0;
+        $sum += $_ for @{$logNormalDistBins{$binName}};
+        my $P_x = $sum / ($numberOfPoints * $binWidth);
+        print " p_x = $P_x ";
+        print "\n";
+    }
+    print "\n\n";
+    foreach my $binName (sort numeric keys %logDistBins) {
+        print "bin = $binName ";
+        my $P_x = scalar @{$logDistBins{$binName}};# / ($totalNumberOfPoints * $binWidth);
+        print " p_x = $P_x ";
+        print "\n";
+    }
+    print "\n\n";
+}
+# this forumla seems to give a normal distribution.
+sub logNormalPDFOld {
+    for (my $i = 1; $i <= $numberOfPoints; $i++) {
+         my $x = rand($range - $mean) + $mean;
+         $x = rand($range);
+         $x = ($i / $numberOfPoints) * $range;
+         my $A = 1 / ( $stddev * sqrt( 2 * pi) );
+
+         my $P_x = exp ( - (1/2)*(($x - $mean)/$stddev)**2 );
+         $P_x = $A * $P_x;
+         print "x = $x ";
+         print "P_x = $P_x ";
+#         print "1overx = " . 1/$x;
+         print "\n";
+    }
+    print "\n\n";
+}
+
+# this should be the pdf of the gumbal distribution:
+# p_x = 1/beta * e((x-mu)/beta) * e(-e*(x-mu)/beta)
+sub gumbelPDFOld {
+    for (my $i = 1; $i <= $numberOfPoints; $i++) {
+        my $x = ($i / $numberOfPoints) * $range;
+        my $A = 1 / $stddev;
+        my $P_x = exp( - exp(($x - $mean)/$stddev));
+        $P_x = $P_x * $A;
+        print "x = $x ";
+        print "p_x = $P_x ";
+        print "\n";
+    }
+    print "\n\n";
+}
+
+# this is an attempt to generate random numbers with gumbel distn
+# http://www.brighton-webs.co.uk/distributions/gumbel.asp
+# r = g(u)
+# r = mode - .scale * log(log(1/u))
+sub gumbelRand {
+    for (my $i = 1; $i <= $numberOfPoints; $i++) {
+        my $u = rand;
+        my $r = $mean - $stddev * log(log(1/$u));
+        print "x = $r ";
+        print "y = $u ";
+        print "\n";
+    }
+    print "\n\n";
+}
+
+# now, this function generates random, normalised normal numbers.
+# and then makes them into a log normal distribution
+# however, this distn' dosen't have the mean and stdev of the normal
+# distn' which is the 'seed'.
+sub logNormalBoxM {
+    print "logNormalBoxM\n";
+
+# so now count them into bins;
+    my %logNormalDistBins = ();
+    my $localCount = 0;
+    while ($localCount < $numberOfPoints) {
+        my @normalBoxMuller = &normalBoxMuller(100, $mean, $stddev );
+        @normalBoxMuller = &normalBoxMuller(100, log($mean) - ($stddev**2)/2, sqrt(log($stddev/($mean**2) + 1)) );
+        foreach my $normValue (@normalBoxMuller) {
+            if ($normValue > 1) { # only take the RHS of the normal distn'
+                $normValue = exp($normValue) - sqrt(pi * 2);
+                if ($normValue > 0 && $normValue < $range) {
+                    my $bin = ($binWidth/2)+$binWidth * floor($normValue / $binWidth);# - exp($mean);
+                    push(@{$logNormalDistBins{$bin}}, $normValue);
+                    $localCount++;
+                }
+            }
+        }
+    }
+    my @binnedLogNormal = ();
+    foreach my $binName (sort numeric keys %logNormalDistBins) {
+        print "bin = $binName ";
+        my $P_x = scalar @{$logNormalDistBins{$binName}} / ($numberOfPoints * $binWidth);
+        print " p_x = $P_x ";
+        my $stdError = sqrt(Statistics::Basic::StdDev->new(\@{$logNormalDistBins{$binName}})->query);
+        print " stderr = $stdError"; 
+        print "\n";
+    }
+    print "\n\n";
+}
+# now I put my lognormally distributed random numbers into log 
+# bins.
+sub logNormalBoxMLogBins {
+    print "logNormalBoxMLogBins\n";
+
+# so now count them into bins;
+    my %logNormalDistLogBins = ();
+    my $localCount = 0;
+    while ($localCount < $numberOfPoints) {
+        my @normalBoxMuller = &normalBoxMuller(100, $mean, $stddev );
+        @normalBoxMuller = &normalBoxMuller(100, log($mean) - ($stddev**2)/2, sqrt(log($stddev/($mean**2) + 1)) );
+        foreach my $normValue (@normalBoxMuller) {
+            if ($normValue > 1) { # only take the RHS of the normal distn'
+                $normValue = exp($normValue) - sqrt(pi * 2);
+                if ($normValue > 0 && $normValue < $range) {
+                    my $bin = ($binWidth/2)+$binWidth * floor($normValue / $binWidth);
+                    push(@{$logNormalDistLogBins{$bin}}, $normValue);
+                    $localCount++;
+                }
+            }
+        }
+    }
+    my @binnedLogNormal = ();
+    foreach my $binName (sort numeric keys %logNormalDistLogBins) {
+        print "bin = $binName ";
+        my $P_x = scalar @{$logNormalDistLogBins{$binName}} / ($numberOfPoints * $binWidth);
+        print " p_x = $P_x ";
+        my $stdError = sqrt(Statistics::Basic::StdDev->new(\@{$logNormalDistLogBins{$binName}})->query);
+        print " stderr = $stdError"; 
+        print "\n";
+    }
+    print "\n\n";
+}
+# this is my log normal distribution pdf, binned
+# P(x) = 1/sigma sqrt(2) pi x * e^(ln x - mu)/(2 sigma)^2
+sub myOld_logNormalPDFBin {
+    my ($numberOfPoints, $mean, $stddev, $range, $numberOfBins, $binWidth) = @_;
+    print "logNormalPDFBin\n";
+    print "no of points : $numberOfPoints mean $mean, stdev $stddev\n";
+    my %logNormalDistBins = ();
+    my $preTotal = 0;
+    for (my $i = 0; $i < $numberOfPoints; $i++) {
+        my $x = rand($range - $mean) + $mean;
+        $x = rand($range);
+        #$x = ($i / $numberOfPoints) * $range;
+        my $A = 1 / ($stddev * sqrt( 2 * pi ) * $x);
+        my $P_x = exp (-((log($x/$mean))**2/(2 * $stddev**2)));
+        $P_x = $A * $P_x;
+                    
+        my $normValue = $P_x;
+        my $bin = ($binWidth/2)+$binWidth * floor($x / $binWidth);# - exp($mean);
+        push(@{$logNormalDistBins{$bin}}, $normValue);
+        #    print "bin = $bin normvalue = $normValue binwidth = $binWidth \n";
+    }
+    my $total = 0;
+    my $P_xtotal = 0;
+    foreach my $binName (sort numeric keys %logNormalDistBins) {
+        my $sum = 0;
+        $sum += $_ for @{$logNormalDistBins{$binName}};
+        my $height = $sum;
+        $sum = $sum / ($numberOfPoints * $binWidth);
+        print "bin = $binName ";
+        my $P_x = scalar @{$logNormalDistBins{$binName}} / ($numberOfPoints);# * $binWidth);
+        print " p_x = $P_x ";
+        $P_xtotal += $P_x;
+        $total += $sum * $binWidth;
+        print " sum = $sum ";
+        #    my $stdError = sqrt(Statistics::Basic::StdDev->new(\@{$logNormalDistBins{$binName}})->query);
+        #print " stderr = $stdError"; 
+        print "\n";
+    }
+    print "total = $total px total = $P_xtotal\n";
+    print "\n\n";
+}
+=cut oldcode
+

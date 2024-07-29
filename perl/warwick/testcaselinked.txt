@@ -1,0 +1,4 @@
+for spot: 7737, pairing candidates are:
+7751 y
+77569991
+

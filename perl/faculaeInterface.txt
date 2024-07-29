@@ -1,0 +1,60 @@
+# some spots have an additional letter, we can convert this to a int to get the
+sub getDateTime {
+sub getDate {
+sub getYear {
+sub getMonth {
+sub getDayOfMonth {
+    my ($year,$month,$day) = Add_Delta_Days($self->getYear,1,1,floor($self->day_of_year));
+sub getFractionOfDay {
+sub getHour {
+    return $self->getFractionOfDay / 1000 * 24;
+sub getDayOfYear {
+sub getGroupNumber {
+sub getProjectedUmbralArea {
+sub getProjectedWholeSpotArea {
+sub getCorrectedUmbralArea {
+sub getCorrectedWholeSpotArea {
+sub getCalculatedProjectedUmbralArea {
+sub getCalculatedProjectedWholeSpotArea {
+sub getCalcuatedProjectedFaculaeArea {
+sub getCalculatedLatitude {
+sub getCalculatedLongitude {
+sub getCalculatedCarringtonLongitude {
+sub getSolarRadii {
+sub getPositionAngle {
+sub getCarringtonLongitude {
+sub getLatitude {
+sub getFaculaeArea {
+sub getFaculaeQualifyingLetters {
+sub getCentralMeridianDistance {
+        $self->getYear(),
+        $self->getMonth(),
+        $self->getDayOfMonth(),
+        $self->getHour()); 
+    my $prelim_res = $self->getCarringtonLongitude - $L_;
+sub getLBP {
+        $self->getYear(),
+        $self->getMonth(),
+        $self->getDayOfMonth(),
+        $self->getHour());
+sub getCalculatedHelioprojective {
+sub getOrigionalGreenwichFormat {
+        $self->getYear,
+        $self->getMonth,
+        $self->getDayOfMonth(),
+        $self->getFractionOfDay(),
+        $self->getGroupNumber(),
+        $self->getCalculatedProjectedUmbralArea(),
+        $self->getCalculatedProjectedWholeSpotArea(),
+        $self->getCorrectedUmbralArea(),
+        $self->getCorrectedWholeSpotArea(),
+        $self->getSolarRadii(),
+        $self->getPositionAngle(),
+        $self->getCarringtonLongitude(),
+        $self->getLatitude(),
+        $self->getCentralMeridianDistance()
+sub getRoe {
+sub getSun_B0 {
+sub getSun_L0 {
+sub getSun_P {
+sub getSun_S {

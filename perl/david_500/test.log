@@ -1,0 +1,1611 @@
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=latex 2009.10.27)  4 DEC 2009 15:09
+entering extended mode
+ %&-line parsing enabled.
+**test.tex
+(./test.tex
+LaTeX2e <2005/12/01>
+Babel <v3.8h> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, arabic, basque, bulgarian, coptic, welsh, czech, slovak, german, ng
+erman, danish, esperanto, spanish, catalan, galician, estonian, farsi, finnish,
+ french, greek, monogreek, ancientgreek, croatian, hungarian, interlingua, ibyc
+us, indonesian, icelandic, italian, latin, mongolian, dutch, norsk, polish, por
+tuguese, pinyin, romanian, russian, slovenian, uppersorbian, serbian, swedish, 
+turkish, ukenglish, ukrainian, loaded.
+(/usr/share/texmf/tex/latex/base/report.cls
+Document Class: report 2005/09/16 v1.4f Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size11.clo
+File: size11.clo 2005/09/16 v1.4f Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2006/02/20 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: dvips.def on input line 90.
+
+(/usr/share/texmf/tex/latex/graphics/dvips.def
+File: dvips.def 1999/02/16 v3.0i Driver-dependant file (DPC,SPQR)
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texmf/tex/latex/tools/array.sty
+Package: array 2005/08/23 v2.4b Tabular extension package (FMi)
+\col@sep=\dimen105
+\extrarowheight=\dimen106
+\NC@list=\toks15
+\extratabsurround=\skip43
+\backup@length=\skip44
+)
+(/usr/share/texmf/tex/latex/preprint/fullpage.sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip45
+)
+(/usr/share/texmf/tex/latex/tools/longtable.sty
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip46
+\LTright=\skip47
+\LTpre=\skip48
+\LTpost=\skip49
+\LTchunksize=\count88
+\LTcapwidth=\dimen107
+\LT@head=\box26
+\LT@firsthead=\box27
+\LT@foot=\box28
+\LT@lastfoot=\box29
+\LT@cols=\count89
+\LT@rows=\count90
+\c@LT@tables=\count91
+\c@LT@chunks=\count92
+\LT@p@ftn=\toks16
+) (./test.aux)
+\openout1 = `test.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+File: /tmp/500_bigger/18830415.eps Graphic file (type eps)
+
+</tmp/500_bigger/18830415.eps>
+File: /tmp/500_bigger/18830417.eps Graphic file (type eps)
+ </tmp/500_bigger/18830417.eps>
+File: /tmp/500_bigger/18830418.eps Graphic file (type eps)
+
+</tmp/500_bigger/18830418.eps>
+File: /tmp/500_bigger/18831013.eps Graphic file (type eps)
+ </tmp/500_bigger/18831013.eps>
+File: /tmp/500_bigger/18831115.eps Graphic file (type eps)
+
+</tmp/500_bigger/18831115.eps>
+File: /tmp/500_bigger/18831117.eps Graphic file (type eps)
+ </tmp/500_bigger/18831117.eps>
+File: /tmp/500_bigger/18831120.eps Graphic file (type eps)
+
+</tmp/500_bigger/18831120.eps>
+File: /tmp/500_bigger/18920620.eps Graphic file (type eps)
+ </tmp/500_bigger/18920620.eps>
+File: /tmp/500_bigger/18920709.eps Graphic file (type eps)
+
+</tmp/500_bigger/18920709.eps>
+File: /tmp/500_bigger/18920731.eps Graphic file (type eps)
+ </tmp/500_bigger/18920731.eps>
+File: /tmp/500_bigger/18930604.eps Graphic file (type eps)
+
+</tmp/500_bigger/18930604.eps>
+File: /tmp/500_bigger/18930605.eps Graphic file (type eps)
+ </tmp/500_bigger/18930605.eps>
+File: /tmp/500_bigger/18930712.eps Graphic file (type eps)
+
+</tmp/500_bigger/18930712.eps>
+File: /tmp/500_bigger/18930906.eps Graphic file (type eps)
+ </tmp/500_bigger/18930906.eps>
+File: /tmp/500_bigger/18931225.eps Graphic file (type eps)
+
+</tmp/500_bigger/18931225.eps>
+File: /tmp/500_bigger/18931226.eps Graphic file (type eps)
+ </tmp/500_bigger/18931226.eps>
+File: /tmp/500_bigger/18931227.eps Graphic file (type eps)
+
+</tmp/500_bigger/18931227.eps>
+File: /tmp/500_bigger/18931228.eps Graphic file (type eps)
+ </tmp/500_bigger/18931228.eps>
+File: /tmp/500_bigger/18940719.eps Graphic file (type eps)
+
+</tmp/500_bigger/18940719.eps>
+File: /tmp/500_bigger/18940720.eps Graphic file (type eps)
+ </tmp/500_bigger/18940720.eps>
+File: /tmp/500_bigger/18951002.eps Graphic file (type eps)
+
+</tmp/500_bigger/18951002.eps>
+File: /tmp/500_bigger/18951027.eps Graphic file (type eps)
+ </tmp/500_bigger/18951027.eps>
+File: /tmp/500_bigger/19051125.eps Graphic file (type eps)
+
+</tmp/500_bigger/19051125.eps>
+File: /tmp/500_bigger/19051126.eps Graphic file (type eps)
+ </tmp/500_bigger/19051126.eps>
+File: /tmp/500_bigger/19060630.eps Graphic file (type eps)
+
+</tmp/500_bigger/19060630.eps>
+File: /tmp/500_bigger/19071015.eps Graphic file (type eps)
+ </tmp/500_bigger/19071015.eps>
+File: /tmp/500_bigger/19071016.eps Graphic file (type eps)
+
+</tmp/500_bigger/19071016.eps>
+File: /tmp/500_bigger/19080806.eps Graphic file (type eps)
+ </tmp/500_bigger/19080806.eps>
+File: /tmp/500_bigger/19080807.eps Graphic file (type eps)
+
+</tmp/500_bigger/19080807.eps>
+File: /tmp/500_bigger/19080808.eps Graphic file (type eps)
+ </tmp/500_bigger/19080808.eps>
+File: /tmp/500_bigger/19080809.eps Graphic file (type eps)
+
+</tmp/500_bigger/19080809.eps>
+File: /tmp/500_bigger/19090303.eps Graphic file (type eps)
+ </tmp/500_bigger/19090303.eps>
+File: /tmp/500_bigger/19170306.eps Graphic file (type eps)
+
+</tmp/500_bigger/19170306.eps>
+File: /tmp/500_bigger/19170529.eps Graphic file (type eps)
+ </tmp/500_bigger/19170529.eps>
+File: /tmp/500_bigger/19170530.eps Graphic file (type eps)
+
+</tmp/500_bigger/19170530.eps>
+File: /tmp/500_bigger/19170531.eps Graphic file (type eps)
+ </tmp/500_bigger/19170531.eps>
+File: /tmp/500_bigger/19170812.eps Graphic file (type eps)
+
+</tmp/500_bigger/19170812.eps>
+File: /tmp/500_bigger/19170813.eps Graphic file (type eps)
+ </tmp/500_bigger/19170813.eps>
+File: /tmp/500_bigger/19170814.eps Graphic file (type eps)
+
+</tmp/500_bigger/19170814.eps>
+File: /tmp/500_bigger/19170815.eps Graphic file (type eps)
+ </tmp/500_bigger/19170815.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 14--134
+ [] [] [] [] [] 
+ []
+
+File: /tmp/500_bigger/19170816.eps Graphic file (type eps)
+</tmp/500_bigger/19170816.eps>
+File: /tmp/500_bigger/19171225.eps Graphic file (type eps)
+ </tmp/500_bigger/19171225.eps>
+File: /tmp/500_bigger/19171226.eps Graphic file (type eps)
+
+</tmp/500_bigger/19171226.eps>
+File: /tmp/500_bigger/19171227.eps Graphic file (type eps)
+ </tmp/500_bigger/19171227.eps>
+File: /tmp/500_bigger/19190312.eps Graphic file (type eps)
+
+</tmp/500_bigger/19190312.eps>
+File: /tmp/500_bigger/19190313.eps Graphic file (type eps)
+ </tmp/500_bigger/19190313.eps>
+File: /tmp/500_bigger/19190619.eps Graphic file (type eps)
+
+</tmp/500_bigger/19190619.eps>
+File: /tmp/500_bigger/19220303.eps Graphic file (type eps)
+ </tmp/500_bigger/19220303.eps>
+File: /tmp/500_bigger/19220304.eps Graphic file (type eps)
+
+</tmp/500_bigger/19220304.eps>
+File: /tmp/500_bigger/19220305.eps Graphic file (type eps)
+ </tmp/500_bigger/19220305.eps>
+File: /tmp/500_bigger/19220306.eps Graphic file (type eps)
+
+</tmp/500_bigger/19220306.eps>
+File: /tmp/500_bigger/19220307.eps Graphic file (type eps)
+ </tmp/500_bigger/19220307.eps>
+File: /tmp/500_bigger/19251018.eps Graphic file (type eps)
+
+</tmp/500_bigger/19251018.eps>
+File: /tmp/500_bigger/19251213.eps Graphic file (type eps)
+ </tmp/500_bigger/19251213.eps>
+File: /tmp/500_bigger/19251214.eps Graphic file (type eps)
+
+</tmp/500_bigger/19251214.eps>
+File: /tmp/500_bigger/19260217.eps Graphic file (type eps)
+ </tmp/500_bigger/19260217.eps>
+File: /tmp/500_bigger/19260218.eps Graphic file (type eps)
+
+</tmp/500_bigger/19260218.eps>
+File: /tmp/500_bigger/19261012.eps Graphic file (type eps)
+ </tmp/500_bigger/19261012.eps>
+File: /tmp/500_bigger/19261013.eps Graphic file (type eps)
+
+</tmp/500_bigger/19261013.eps>
+File: /tmp/500_bigger/19270416.eps Graphic file (type eps)
+ </tmp/500_bigger/19270416.eps>
+File: /tmp/500_bigger/19280503.eps Graphic file (type eps)
+
+</tmp/500_bigger/19280503.eps>
+File: /tmp/500_bigger/19280504.eps Graphic file (type eps)
+ </tmp/500_bigger/19280504.eps>
+File: /tmp/500_bigger/19280505.eps Graphic file (type eps)
+
+</tmp/500_bigger/19280505.eps>
+File: /tmp/500_bigger/19280506.eps Graphic file (type eps)
+ </tmp/500_bigger/19280506.eps>
+File: /tmp/500_bigger/19280714.eps Graphic file (type eps)
+
+</tmp/500_bigger/19280714.eps>
+File: /tmp/500_bigger/19280923.eps Graphic file (type eps)
+ </tmp/500_bigger/19280923.eps>
+File: /tmp/500_bigger/19280924.eps Graphic file (type eps)
+
+</tmp/500_bigger/19280924.eps>
+File: /tmp/500_bigger/19280925.eps Graphic file (type eps)
+ </tmp/500_bigger/19280925.eps>
+File: /tmp/500_bigger/19291128.eps Graphic file (type eps)
+
+</tmp/500_bigger/19291128.eps>
+File: /tmp/500_bigger/19291129.eps Graphic file (type eps)
+ </tmp/500_bigger/19291129.eps>
+File: /tmp/500_bigger/19291130.eps Graphic file (type eps)
+
+</tmp/500_bigger/19291130.eps>
+File: /tmp/500_bigger/19291201.eps Graphic file (type eps)
+ </tmp/500_bigger/19291201.eps>
+File: /tmp/500_bigger/19291202.eps Graphic file (type eps)
+
+</tmp/500_bigger/19291202.eps>
+File: /tmp/500_bigger/19291203.eps Graphic file (type eps)
+ </tmp/500_bigger/19291203.eps>
+File: /tmp/500_bigger/19291213.eps Graphic file (type eps)
+
+</tmp/500_bigger/19291213.eps>
+File: /tmp/500_bigger/19291214.eps Graphic file (type eps)
+ </tmp/500_bigger/19291214.eps>
+File: /tmp/500_bigger/19291215.eps Graphic file (type eps)
+
+</tmp/500_bigger/19291215.eps>
+File: /tmp/500_bigger/19291216.eps Graphic file (type eps)
+ </tmp/500_bigger/19291216.eps>
+File: /tmp/500_bigger/19361129.eps Graphic file (type eps)
+
+</tmp/500_bigger/19361129.eps>
+File: /tmp/500_bigger/19361130.eps Graphic file (type eps)
+ </tmp/500_bigger/19361130.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 134--254
+ [] [] [] [] [] 
+ []
+
+[1
+
+]
+File: /tmp/500_bigger/19370126.eps Graphic file (type eps)
+ </tmp/500_bigger/19370126.eps>
+File: /tmp/500_bigger/19370129.eps Graphic file (type eps)
+ </tmp/500_bigger/19370129.eps>
+File: /tmp/500_bigger/19370130.eps Graphic file (type eps)
+
+</tmp/500_bigger/19370130.eps>
+File: /tmp/500_bigger/19370131.eps Graphic file (type eps)
+ </tmp/500_bigger/19370131.eps>
+File: /tmp/500_bigger/19370427.eps Graphic file (type eps)
+
+</tmp/500_bigger/19370427.eps>
+File: /tmp/500_bigger/19370522.eps Graphic file (type eps)
+ </tmp/500_bigger/19370522.eps>
+File: /tmp/500_bigger/19370523.eps Graphic file (type eps)
+
+</tmp/500_bigger/19370523.eps>
+File: /tmp/500_bigger/19370524.eps Graphic file (type eps)
+ </tmp/500_bigger/19370524.eps>
+File: /tmp/500_bigger/19370525.eps Graphic file (type eps)
+
+</tmp/500_bigger/19370525.eps>
+File: /tmp/500_bigger/19370611.eps Graphic file (type eps)
+ </tmp/500_bigger/19370611.eps>
+File: /tmp/500_bigger/19370614.eps Graphic file (type eps)
+
+</tmp/500_bigger/19370614.eps>
+File: /tmp/500_bigger/19370615.eps Graphic file (type eps)
+ </tmp/500_bigger/19370615.eps>
+File: /tmp/500_bigger/19370616.eps Graphic file (type eps)
+
+</tmp/500_bigger/19370616.eps>
+File: /tmp/500_bigger/19370617.eps Graphic file (type eps)
+ </tmp/500_bigger/19370617.eps>
+File: /tmp/500_bigger/19370618.eps Graphic file (type eps)
+
+</tmp/500_bigger/19370618.eps>
+File: /tmp/500_bigger/19370619.eps Graphic file (type eps)
+ </tmp/500_bigger/19370619.eps>
+File: /tmp/500_bigger/19370709.eps Graphic file (type eps)
+
+</tmp/500_bigger/19370709.eps>
+File: /tmp/500_bigger/19370710.eps Graphic file (type eps)
+ </tmp/500_bigger/19370710.eps>
+File: /tmp/500_bigger/19370711.eps Graphic file (type eps)
+
+</tmp/500_bigger/19370711.eps>
+File: /tmp/500_bigger/19370712.eps Graphic file (type eps)
+ </tmp/500_bigger/19370712.eps>
+File: /tmp/500_bigger/19370713.eps Graphic file (type eps)
+
+</tmp/500_bigger/19370713.eps>
+File: /tmp/500_bigger/19370714.eps Graphic file (type eps)
+ </tmp/500_bigger/19370714.eps>
+File: /tmp/500_bigger/19370802.eps Graphic file (type eps)
+
+</tmp/500_bigger/19370802.eps>
+File: /tmp/500_bigger/19370807.eps Graphic file (type eps)
+ </tmp/500_bigger/19370807.eps>
+File: /tmp/500_bigger/19380214.eps Graphic file (type eps)
+
+</tmp/500_bigger/19380214.eps>
+File: /tmp/500_bigger/19380215.eps Graphic file (type eps)
+ </tmp/500_bigger/19380215.eps>
+File: /tmp/500_bigger/19380216.eps Graphic file (type eps)
+
+</tmp/500_bigger/19380216.eps>
+File: /tmp/500_bigger/19380413.eps Graphic file (type eps)
+ </tmp/500_bigger/19380413.eps>
+File: /tmp/500_bigger/19380416.eps Graphic file (type eps)
+
+</tmp/500_bigger/19380416.eps>
+File: /tmp/500_bigger/19380417.eps Graphic file (type eps)
+ </tmp/500_bigger/19380417.eps>
+File: /tmp/500_bigger/19380520.eps Graphic file (type eps)
+
+</tmp/500_bigger/19380520.eps>
+File: /tmp/500_bigger/19380710.eps Graphic file (type eps)
+ </tmp/500_bigger/19380710.eps>
+File: /tmp/500_bigger/19380711.eps Graphic file (type eps)
+
+</tmp/500_bigger/19380711.eps>
+File: /tmp/500_bigger/19380712.eps Graphic file (type eps)
+ </tmp/500_bigger/19380712.eps>
+File: /tmp/500_bigger/19380713.eps Graphic file (type eps)
+
+</tmp/500_bigger/19380713.eps>
+File: /tmp/500_bigger/19380727.eps Graphic file (type eps)
+ </tmp/500_bigger/19380727.eps>
+File: /tmp/500_bigger/19380927.eps Graphic file (type eps)
+
+</tmp/500_bigger/19380927.eps>
+File: /tmp/500_bigger/19380928.eps Graphic file (type eps)
+ </tmp/500_bigger/19380928.eps>
+File: /tmp/500_bigger/19380929.eps Graphic file (type eps)
+
+</tmp/500_bigger/19380929.eps>
+File: /tmp/500_bigger/19390422.eps Graphic file (type eps)
+ </tmp/500_bigger/19390422.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 254--374
+ [] [] [] [] [] 
+ []
+
+[2] [3]
+File: /tmp/500_bigger/19390423.eps Graphic file (type eps)
+ </tmp/500_bigger/19390423.eps>
+File: /tmp/500_bigger/19390805.eps Graphic file (type eps)
+ </tmp/500_bigger/19390805.eps>
+File: /tmp/500_bigger/19390806.eps Graphic file (type eps)
+
+</tmp/500_bigger/19390806.eps>
+File: /tmp/500_bigger/19390811.eps Graphic file (type eps)
+ </tmp/500_bigger/19390811.eps>
+File: /tmp/500_bigger/19390812.eps Graphic file (type eps)
+
+</tmp/500_bigger/19390812.eps>
+File: /tmp/500_bigger/19390813.eps Graphic file (type eps)
+ </tmp/500_bigger/19390813.eps>
+File: /tmp/500_bigger/19390814.eps Graphic file (type eps)
+
+</tmp/500_bigger/19390814.eps>
+File: /tmp/500_bigger/19390818.eps Graphic file (type eps)
+ </tmp/500_bigger/19390818.eps>
+File: /tmp/500_bigger/19390819.eps Graphic file (type eps)
+
+</tmp/500_bigger/19390819.eps>
+File: /tmp/500_bigger/19390930.eps Graphic file (type eps)
+ </tmp/500_bigger/19390930.eps>
+File: /tmp/500_bigger/19391001.eps Graphic file (type eps)
+
+</tmp/500_bigger/19391001.eps>
+File: /tmp/500_bigger/19391002.eps Graphic file (type eps)
+ </tmp/500_bigger/19391002.eps>
+File: /tmp/500_bigger/19400813.eps Graphic file (type eps)
+
+</tmp/500_bigger/19400813.eps>
+File: /tmp/500_bigger/19460729.eps Graphic file (type eps)
+ </tmp/500_bigger/19460729.eps>
+File: /tmp/500_bigger/19460730.eps Graphic file (type eps)
+
+</tmp/500_bigger/19460730.eps>
+File: /tmp/500_bigger/19460731.eps Graphic file (type eps)
+ </tmp/500_bigger/19460731.eps>
+File: /tmp/500_bigger/19460801.eps Graphic file (type eps)
+
+</tmp/500_bigger/19460801.eps>
+File: /tmp/500_bigger/19460802.eps Graphic file (type eps)
+ </tmp/500_bigger/19460802.eps>
+File: /tmp/500_bigger/19460805.eps Graphic file (type eps)
+
+</tmp/500_bigger/19460805.eps>
+File: /tmp/500_bigger/19460806.eps Graphic file (type eps)
+ </tmp/500_bigger/19460806.eps>
+File: /tmp/500_bigger/19460831.eps Graphic file (type eps)
+
+</tmp/500_bigger/19460831.eps>
+File: /tmp/500_bigger/19461221.eps Graphic file (type eps)
+ </tmp/500_bigger/19461221.eps>
+File: /tmp/500_bigger/19461222.eps Graphic file (type eps)
+
+</tmp/500_bigger/19461222.eps>
+File: /tmp/500_bigger/19461223.eps Graphic file (type eps)
+ </tmp/500_bigger/19461223.eps>
+File: /tmp/500_bigger/19461224.eps Graphic file (type eps)
+
+</tmp/500_bigger/19461224.eps>
+File: /tmp/500_bigger/19470111.eps Graphic file (type eps)
+ </tmp/500_bigger/19470111.eps>
+File: /tmp/500_bigger/19470112.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470112.eps>
+File: /tmp/500_bigger/19470113.eps Graphic file (type eps)
+ </tmp/500_bigger/19470113.eps>
+File: /tmp/500_bigger/19470114.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470114.eps>
+File: /tmp/500_bigger/19470115.eps Graphic file (type eps)
+ </tmp/500_bigger/19470115.eps>
+File: /tmp/500_bigger/19470116.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470116.eps>
+File: /tmp/500_bigger/19470117.eps Graphic file (type eps)
+ </tmp/500_bigger/19470117.eps>
+File: /tmp/500_bigger/19470124.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470124.eps>
+File: /tmp/500_bigger/19470207.eps Graphic file (type eps)
+ </tmp/500_bigger/19470207.eps>
+File: /tmp/500_bigger/19470208.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470208.eps>
+File: /tmp/500_bigger/19470209.eps Graphic file (type eps)
+ </tmp/500_bigger/19470209.eps>
+File: /tmp/500_bigger/19470304.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470304.eps>
+File: /tmp/500_bigger/19470305.eps Graphic file (type eps)
+ </tmp/500_bigger/19470305.eps>
+File: /tmp/500_bigger/19470307.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470307.eps>
+File: /tmp/500_bigger/19470331.eps Graphic file (type eps)
+ </tmp/500_bigger/19470331.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 374--494
+ [] [] [] [] [] 
+ []
+
+[4] [5]
+File: /tmp/500_bigger/19470401.eps Graphic file (type eps)
+ </tmp/500_bigger/19470401.eps>
+File: /tmp/500_bigger/19470402.eps Graphic file (type eps)
+ </tmp/500_bigger/19470402.eps>
+File: /tmp/500_bigger/19470425.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470425.eps>
+File: /tmp/500_bigger/19470426.eps Graphic file (type eps)
+ </tmp/500_bigger/19470426.eps>
+File: /tmp/500_bigger/19470427.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470427.eps>
+File: /tmp/500_bigger/19470428.eps Graphic file (type eps)
+ </tmp/500_bigger/19470428.eps>
+File: /tmp/500_bigger/19470504.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470504.eps>
+File: /tmp/500_bigger/19470505.eps Graphic file (type eps)
+ </tmp/500_bigger/19470505.eps>
+File: /tmp/500_bigger/19470506.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470506.eps>
+File: /tmp/500_bigger/19470507.eps Graphic file (type eps)
+ </tmp/500_bigger/19470507.eps>
+File: /tmp/500_bigger/19470508.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470508.eps>
+File: /tmp/500_bigger/19470510.eps Graphic file (type eps)
+ </tmp/500_bigger/19470510.eps>
+File: /tmp/500_bigger/19470511.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470511.eps>
+File: /tmp/500_bigger/19470522.eps Graphic file (type eps)
+ </tmp/500_bigger/19470522.eps>
+File: /tmp/500_bigger/19470523.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470523.eps>
+File: /tmp/500_bigger/19470524.eps Graphic file (type eps)
+ </tmp/500_bigger/19470524.eps>
+File: /tmp/500_bigger/19470525.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470525.eps>
+File: /tmp/500_bigger/19470526.eps Graphic file (type eps)
+ </tmp/500_bigger/19470526.eps>
+File: /tmp/500_bigger/19470527.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470527.eps>
+File: /tmp/500_bigger/19470528.eps Graphic file (type eps)
+ </tmp/500_bigger/19470528.eps>
+File: /tmp/500_bigger/19470529.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470529.eps>
+File: /tmp/500_bigger/19470530.eps Graphic file (type eps)
+ </tmp/500_bigger/19470530.eps>
+File: /tmp/500_bigger/19470624.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470624.eps>
+File: /tmp/500_bigger/19470714.eps Graphic file (type eps)
+ </tmp/500_bigger/19470714.eps>
+File: /tmp/500_bigger/19470716.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470716.eps>
+File: /tmp/500_bigger/19470717.eps Graphic file (type eps)
+ </tmp/500_bigger/19470717.eps>
+File: /tmp/500_bigger/19470718.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470718.eps>
+File: /tmp/500_bigger/19470720.eps Graphic file (type eps)
+ </tmp/500_bigger/19470720.eps>
+File: /tmp/500_bigger/19470721.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470721.eps>
+File: /tmp/500_bigger/19470722.eps Graphic file (type eps)
+ </tmp/500_bigger/19470722.eps>
+File: /tmp/500_bigger/19470803.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470803.eps>
+File: /tmp/500_bigger/19470807.eps Graphic file (type eps)
+ </tmp/500_bigger/19470807.eps>
+File: /tmp/500_bigger/19470810.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470810.eps>
+File: /tmp/500_bigger/19470811.eps Graphic file (type eps)
+ </tmp/500_bigger/19470811.eps>
+File: /tmp/500_bigger/19470812.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470812.eps>
+File: /tmp/500_bigger/19470813.eps Graphic file (type eps)
+ </tmp/500_bigger/19470813.eps>
+File: /tmp/500_bigger/19470814.eps Graphic file (type eps)
+
+</tmp/500_bigger/19470814.eps>
+File: /tmp/500_bigger/19471002.eps Graphic file (type eps)
+ </tmp/500_bigger/19471002.eps>
+File: /tmp/500_bigger/19471003.eps Graphic file (type eps)
+
+</tmp/500_bigger/19471003.eps>
+File: /tmp/500_bigger/19471004.eps Graphic file (type eps)
+ </tmp/500_bigger/19471004.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 494--614
+ [] [] [] [] [] 
+ []
+
+[6] [7]
+File: /tmp/500_bigger/19471005.eps Graphic file (type eps)
+ </tmp/500_bigger/19471005.eps>
+File: /tmp/500_bigger/19471022.eps Graphic file (type eps)
+ </tmp/500_bigger/19471022.eps>
+File: /tmp/500_bigger/19471023.eps Graphic file (type eps)
+
+</tmp/500_bigger/19471023.eps>
+File: /tmp/500_bigger/19471025.eps Graphic file (type eps)
+ </tmp/500_bigger/19471025.eps>
+File: /tmp/500_bigger/19480401.eps Graphic file (type eps)
+
+</tmp/500_bigger/19480401.eps>
+File: /tmp/500_bigger/19480405.eps Graphic file (type eps)
+ </tmp/500_bigger/19480405.eps>
+File: /tmp/500_bigger/19480417.eps Graphic file (type eps)
+
+</tmp/500_bigger/19480417.eps>
+File: /tmp/500_bigger/19480429.eps Graphic file (type eps)
+ </tmp/500_bigger/19480429.eps>
+File: /tmp/500_bigger/19480507.eps Graphic file (type eps)
+
+</tmp/500_bigger/19480507.eps>
+File: /tmp/500_bigger/19480508.eps Graphic file (type eps)
+ </tmp/500_bigger/19480508.eps>
+File: /tmp/500_bigger/19480509.eps Graphic file (type eps)
+
+</tmp/500_bigger/19480509.eps>
+File: /tmp/500_bigger/19480510.eps Graphic file (type eps)
+ </tmp/500_bigger/19480510.eps>
+File: /tmp/500_bigger/19480511.eps Graphic file (type eps)
+
+</tmp/500_bigger/19480511.eps>
+File: /tmp/500_bigger/19480512.eps Graphic file (type eps)
+ </tmp/500_bigger/19480512.eps>
+File: /tmp/500_bigger/19480513.eps Graphic file (type eps)
+
+</tmp/500_bigger/19480513.eps>
+File: /tmp/500_bigger/19480514.eps Graphic file (type eps)
+ </tmp/500_bigger/19480514.eps>
+File: /tmp/500_bigger/19480922.eps Graphic file (type eps)
+
+</tmp/500_bigger/19480922.eps>
+File: /tmp/500_bigger/19480923.eps Graphic file (type eps)
+ </tmp/500_bigger/19480923.eps>
+File: /tmp/500_bigger/19481218.eps Graphic file (type eps)
+
+</tmp/500_bigger/19481218.eps>
+File: /tmp/500_bigger/19481221.eps Graphic file (type eps)
+ </tmp/500_bigger/19481221.eps>
+File: /tmp/500_bigger/19481222.eps Graphic file (type eps)
+
+</tmp/500_bigger/19481222.eps>
+File: /tmp/500_bigger/19490118.eps Graphic file (type eps)
+ </tmp/500_bigger/19490118.eps>
+File: /tmp/500_bigger/19490201.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490201.eps>
+File: /tmp/500_bigger/19490202.eps Graphic file (type eps)
+ </tmp/500_bigger/19490202.eps>
+File: /tmp/500_bigger/19490205.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490205.eps>
+File: /tmp/500_bigger/19490206.eps Graphic file (type eps)
+ </tmp/500_bigger/19490206.eps>
+File: /tmp/500_bigger/19490207.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490207.eps>
+File: /tmp/500_bigger/19490210.eps Graphic file (type eps)
+ </tmp/500_bigger/19490210.eps>
+File: /tmp/500_bigger/19490216.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490216.eps>
+File: /tmp/500_bigger/19490217.eps Graphic file (type eps)
+ </tmp/500_bigger/19490217.eps>
+File: /tmp/500_bigger/19490218.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490218.eps>
+File: /tmp/500_bigger/19490219.eps Graphic file (type eps)
+ </tmp/500_bigger/19490219.eps>
+File: /tmp/500_bigger/19490301.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490301.eps>
+File: /tmp/500_bigger/19490302.eps Graphic file (type eps)
+ </tmp/500_bigger/19490302.eps>
+File: /tmp/500_bigger/19490303.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490303.eps>
+File: /tmp/500_bigger/19490304.eps Graphic file (type eps)
+ </tmp/500_bigger/19490304.eps>
+File: /tmp/500_bigger/19490305.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490305.eps>
+File: /tmp/500_bigger/19490312.eps Graphic file (type eps)
+ </tmp/500_bigger/19490312.eps>
+File: /tmp/500_bigger/19490314.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490314.eps>
+File: /tmp/500_bigger/19490315.eps Graphic file (type eps)
+ </tmp/500_bigger/19490315.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 614--734
+ [] [] [] [] [] 
+ []
+
+[8] [9]
+File: /tmp/500_bigger/19490316.eps Graphic file (type eps)
+ </tmp/500_bigger/19490316.eps>
+File: /tmp/500_bigger/19490317.eps Graphic file (type eps)
+ </tmp/500_bigger/19490317.eps>
+File: /tmp/500_bigger/19490318.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490318.eps>
+File: /tmp/500_bigger/19490319.eps Graphic file (type eps)
+ </tmp/500_bigger/19490319.eps>
+File: /tmp/500_bigger/19490320.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490320.eps>
+File: /tmp/500_bigger/19490321.eps Graphic file (type eps)
+ </tmp/500_bigger/19490321.eps>
+File: /tmp/500_bigger/19490322.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490322.eps>
+File: /tmp/500_bigger/19490624.eps Graphic file (type eps)
+ </tmp/500_bigger/19490624.eps>
+File: /tmp/500_bigger/19490626.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490626.eps>
+File: /tmp/500_bigger/19490822.eps Graphic file (type eps)
+ </tmp/500_bigger/19490822.eps>
+File: /tmp/500_bigger/19490825.eps Graphic file (type eps)
+
+</tmp/500_bigger/19490825.eps>
+File: /tmp/500_bigger/19491005.eps Graphic file (type eps)
+ </tmp/500_bigger/19491005.eps>
+File: /tmp/500_bigger/19491006.eps Graphic file (type eps)
+
+</tmp/500_bigger/19491006.eps>
+File: /tmp/500_bigger/19491007.eps Graphic file (type eps)
+ </tmp/500_bigger/19491007.eps>
+File: /tmp/500_bigger/19491008.eps Graphic file (type eps)
+
+</tmp/500_bigger/19491008.eps>
+File: /tmp/500_bigger/19491009.eps Graphic file (type eps)
+ </tmp/500_bigger/19491009.eps>
+File: /tmp/500_bigger/19491010.eps Graphic file (type eps)
+
+</tmp/500_bigger/19491010.eps>
+File: /tmp/500_bigger/19491106.eps Graphic file (type eps)
+ </tmp/500_bigger/19491106.eps>
+File: /tmp/500_bigger/19491110.eps Graphic file (type eps)
+
+</tmp/500_bigger/19491110.eps>
+File: /tmp/500_bigger/19500122.eps Graphic file (type eps)
+ </tmp/500_bigger/19500122.eps>
+File: /tmp/500_bigger/19500123.eps Graphic file (type eps)
+
+</tmp/500_bigger/19500123.eps>
+File: /tmp/500_bigger/19500124.eps Graphic file (type eps)
+ </tmp/500_bigger/19500124.eps>
+File: /tmp/500_bigger/19500216.eps Graphic file (type eps)
+
+</tmp/500_bigger/19500216.eps>
+File: /tmp/500_bigger/19500217.eps Graphic file (type eps)
+ </tmp/500_bigger/19500217.eps>
+File: /tmp/500_bigger/19500309.eps Graphic file (type eps)
+
+</tmp/500_bigger/19500309.eps>
+File: /tmp/500_bigger/19500310.eps Graphic file (type eps)
+ </tmp/500_bigger/19500310.eps>
+File: /tmp/500_bigger/19500311.eps Graphic file (type eps)
+
+</tmp/500_bigger/19500311.eps>
+File: /tmp/500_bigger/19500312.eps Graphic file (type eps)
+ </tmp/500_bigger/19500312.eps>
+File: /tmp/500_bigger/19500314.eps Graphic file (type eps)
+
+</tmp/500_bigger/19500314.eps>
+File: /tmp/500_bigger/19500315.eps Graphic file (type eps)
+ </tmp/500_bigger/19500315.eps>
+File: /tmp/500_bigger/19510609.eps Graphic file (type eps)
+
+</tmp/500_bigger/19510609.eps>
+File: /tmp/500_bigger/19510610.eps Graphic file (type eps)
+ </tmp/500_bigger/19510610.eps>
+File: /tmp/500_bigger/19510612.eps Graphic file (type eps)
+
+</tmp/500_bigger/19510612.eps>
+File: /tmp/500_bigger/19510613.eps Graphic file (type eps)
+ </tmp/500_bigger/19510613.eps>
+File: /tmp/500_bigger/19510614.eps Graphic file (type eps)
+
+</tmp/500_bigger/19510614.eps>
+File: /tmp/500_bigger/19560119.eps Graphic file (type eps)
+ </tmp/500_bigger/19560119.eps>
+File: /tmp/500_bigger/19560120.eps Graphic file (type eps)
+
+</tmp/500_bigger/19560120.eps>
+File: /tmp/500_bigger/19560121.eps Graphic file (type eps)
+ </tmp/500_bigger/19560121.eps>
+File: /tmp/500_bigger/19560216.eps Graphic file (type eps)
+
+</tmp/500_bigger/19560216.eps>
+File: /tmp/500_bigger/19560217.eps Graphic file (type eps)
+ </tmp/500_bigger/19560217.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 734--854
+ [] [] [] [] [] 
+ []
+
+[10] [11]
+File: /tmp/500_bigger/19560218.eps Graphic file (type eps)
+ </tmp/500_bigger/19560218.eps>
+File: /tmp/500_bigger/19560219.eps Graphic file (type eps)
+ </tmp/500_bigger/19560219.eps>
+File: /tmp/500_bigger/19560220.eps Graphic file (type eps)
+
+</tmp/500_bigger/19560220.eps>
+File: /tmp/500_bigger/19560221.eps Graphic file (type eps)
+ </tmp/500_bigger/19560221.eps>
+File: /tmp/500_bigger/19560222.eps Graphic file (type eps)
+
+</tmp/500_bigger/19560222.eps>
+File: /tmp/500_bigger/19560223.eps Graphic file (type eps)
+ </tmp/500_bigger/19560223.eps>
+File: /tmp/500_bigger/19560224.eps Graphic file (type eps)
+
+</tmp/500_bigger/19560224.eps>
+File: /tmp/500_bigger/19560622.eps Graphic file (type eps)
+ </tmp/500_bigger/19560622.eps>
+File: /tmp/500_bigger/19560820.eps Graphic file (type eps)
+
+</tmp/500_bigger/19560820.eps>
+File: /tmp/500_bigger/19560821.eps Graphic file (type eps)
+ </tmp/500_bigger/19560821.eps>
+File: /tmp/500_bigger/19560822.eps Graphic file (type eps)
+
+</tmp/500_bigger/19560822.eps>
+File: /tmp/500_bigger/19560823.eps Graphic file (type eps)
+ </tmp/500_bigger/19560823.eps>
+File: /tmp/500_bigger/19560824.eps Graphic file (type eps)
+
+</tmp/500_bigger/19560824.eps>
+File: /tmp/500_bigger/19561010.eps Graphic file (type eps)
+ </tmp/500_bigger/19561010.eps>
+File: /tmp/500_bigger/19561031.eps Graphic file (type eps)
+
+</tmp/500_bigger/19561031.eps>
+File: /tmp/500_bigger/19561101.eps Graphic file (type eps)
+ </tmp/500_bigger/19561101.eps>
+File: /tmp/500_bigger/19561104.eps Graphic file (type eps)
+
+</tmp/500_bigger/19561104.eps>
+File: /tmp/500_bigger/19561105.eps Graphic file (type eps)
+ </tmp/500_bigger/19561105.eps>
+File: /tmp/500_bigger/19561106.eps Graphic file (type eps)
+
+</tmp/500_bigger/19561106.eps>
+File: /tmp/500_bigger/19561107.eps Graphic file (type eps)
+ </tmp/500_bigger/19561107.eps>
+File: /tmp/500_bigger/19561108.eps Graphic file (type eps)
+
+</tmp/500_bigger/19561108.eps>
+File: /tmp/500_bigger/19561109.eps Graphic file (type eps)
+ </tmp/500_bigger/19561109.eps>
+File: /tmp/500_bigger/19561110.eps Graphic file (type eps)
+
+</tmp/500_bigger/19561110.eps>
+File: /tmp/500_bigger/19561112.eps Graphic file (type eps)
+ </tmp/500_bigger/19561112.eps>
+File: /tmp/500_bigger/19561113.eps Graphic file (type eps)
+
+</tmp/500_bigger/19561113.eps>
+File: /tmp/500_bigger/19561114.eps Graphic file (type eps)
+ </tmp/500_bigger/19561114.eps>
+File: /tmp/500_bigger/19561120.eps Graphic file (type eps)
+
+</tmp/500_bigger/19561120.eps>
+File: /tmp/500_bigger/19561121.eps Graphic file (type eps)
+ </tmp/500_bigger/19561121.eps>
+File: /tmp/500_bigger/19561222.eps Graphic file (type eps)
+
+</tmp/500_bigger/19561222.eps>
+File: /tmp/500_bigger/19561223.eps Graphic file (type eps)
+ </tmp/500_bigger/19561223.eps>
+File: /tmp/500_bigger/19561224.eps Graphic file (type eps)
+
+</tmp/500_bigger/19561224.eps>
+File: /tmp/500_bigger/19561225.eps Graphic file (type eps)
+ </tmp/500_bigger/19561225.eps>
+File: /tmp/500_bigger/19561226.eps Graphic file (type eps)
+
+</tmp/500_bigger/19561226.eps>
+File: /tmp/500_bigger/19561227.eps Graphic file (type eps)
+ </tmp/500_bigger/19561227.eps>
+File: /tmp/500_bigger/19561229.eps Graphic file (type eps)
+
+</tmp/500_bigger/19561229.eps>
+File: /tmp/500_bigger/19570410.eps Graphic file (type eps)
+ </tmp/500_bigger/19570410.eps>
+File: /tmp/500_bigger/19570427.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570427.eps>
+File: /tmp/500_bigger/19570531.eps Graphic file (type eps)
+ </tmp/500_bigger/19570531.eps>
+File: /tmp/500_bigger/19570601.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570601.eps>
+File: /tmp/500_bigger/19570604.eps Graphic file (type eps)
+ </tmp/500_bigger/19570604.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 854--974
+ [] [] [] [] [] 
+ []
+
+[12] [13]
+File: /tmp/500_bigger/19570605.eps Graphic file (type eps)
+ </tmp/500_bigger/19570605.eps>
+File: /tmp/500_bigger/19570606.eps Graphic file (type eps)
+ </tmp/500_bigger/19570606.eps>
+File: /tmp/500_bigger/19570616.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570616.eps>
+File: /tmp/500_bigger/19570617.eps Graphic file (type eps)
+ </tmp/500_bigger/19570617.eps>
+File: /tmp/500_bigger/19570618.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570618.eps>
+File: /tmp/500_bigger/19570619.eps Graphic file (type eps)
+ </tmp/500_bigger/19570619.eps>
+File: /tmp/500_bigger/19570620.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570620.eps>
+File: /tmp/500_bigger/19570621.eps Graphic file (type eps)
+ </tmp/500_bigger/19570621.eps>
+File: /tmp/500_bigger/19570622.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570622.eps>
+File: /tmp/500_bigger/19570623.eps Graphic file (type eps)
+ </tmp/500_bigger/19570623.eps>
+File: /tmp/500_bigger/19570624.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570624.eps>
+File: /tmp/500_bigger/19570625.eps Graphic file (type eps)
+ </tmp/500_bigger/19570625.eps>
+File: /tmp/500_bigger/19570626.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570626.eps>
+File: /tmp/500_bigger/19570627.eps Graphic file (type eps)
+ </tmp/500_bigger/19570627.eps>
+File: /tmp/500_bigger/19570629.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570629.eps>
+File: /tmp/500_bigger/19570630.eps Graphic file (type eps)
+ </tmp/500_bigger/19570630.eps>
+File: /tmp/500_bigger/19570702.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570702.eps>
+File: /tmp/500_bigger/19570703.eps Graphic file (type eps)
+ </tmp/500_bigger/19570703.eps>
+File: /tmp/500_bigger/19570704.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570704.eps>
+File: /tmp/500_bigger/19570707.eps Graphic file (type eps)
+ </tmp/500_bigger/19570707.eps>
+File: /tmp/500_bigger/19570720.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570720.eps>
+File: /tmp/500_bigger/19570721.eps Graphic file (type eps)
+ </tmp/500_bigger/19570721.eps>
+File: /tmp/500_bigger/19570722.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570722.eps>
+File: /tmp/500_bigger/19570826.eps Graphic file (type eps)
+ </tmp/500_bigger/19570826.eps>
+File: /tmp/500_bigger/19570827.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570827.eps>
+File: /tmp/500_bigger/19570828.eps Graphic file (type eps)
+ </tmp/500_bigger/19570828.eps>
+File: /tmp/500_bigger/19570829.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570829.eps>
+File: /tmp/500_bigger/19570831.eps Graphic file (type eps)
+ </tmp/500_bigger/19570831.eps>
+File: /tmp/500_bigger/19570901.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570901.eps>
+File: /tmp/500_bigger/19570902.eps Graphic file (type eps)
+ </tmp/500_bigger/19570902.eps>
+File: /tmp/500_bigger/19570903.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570903.eps>
+File: /tmp/500_bigger/19570910.eps Graphic file (type eps)
+ </tmp/500_bigger/19570910.eps>
+File: /tmp/500_bigger/19570911.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570911.eps>
+File: /tmp/500_bigger/19570912.eps Graphic file (type eps)
+ </tmp/500_bigger/19570912.eps>
+File: /tmp/500_bigger/19570914.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570914.eps>
+File: /tmp/500_bigger/19570915.eps Graphic file (type eps)
+ </tmp/500_bigger/19570915.eps>
+File: /tmp/500_bigger/19570916.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570916.eps>
+File: /tmp/500_bigger/19570919.eps Graphic file (type eps)
+ </tmp/500_bigger/19570919.eps>
+File: /tmp/500_bigger/19570922.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570922.eps>
+File: /tmp/500_bigger/19570923.eps Graphic file (type eps)
+ </tmp/500_bigger/19570923.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 974--1094
+ [] [] [] [] [] 
+ []
+
+[14] [15]
+File: /tmp/500_bigger/19570924.eps Graphic file (type eps)
+ </tmp/500_bigger/19570924.eps>
+File: /tmp/500_bigger/19570927.eps Graphic file (type eps)
+ </tmp/500_bigger/19570927.eps>
+File: /tmp/500_bigger/19570929.eps Graphic file (type eps)
+
+</tmp/500_bigger/19570929.eps>
+File: /tmp/500_bigger/19570930.eps Graphic file (type eps)
+ </tmp/500_bigger/19570930.eps>
+File: /tmp/500_bigger/19571001.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571001.eps>
+File: /tmp/500_bigger/19571002.eps Graphic file (type eps)
+ </tmp/500_bigger/19571002.eps>
+File: /tmp/500_bigger/19571003.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571003.eps>
+File: /tmp/500_bigger/19571004.eps Graphic file (type eps)
+ </tmp/500_bigger/19571004.eps>
+File: /tmp/500_bigger/19571005.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571005.eps>
+File: /tmp/500_bigger/19571006.eps Graphic file (type eps)
+ </tmp/500_bigger/19571006.eps>
+File: /tmp/500_bigger/19571007.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571007.eps>
+File: /tmp/500_bigger/19571011.eps Graphic file (type eps)
+ </tmp/500_bigger/19571011.eps>
+File: /tmp/500_bigger/19571012.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571012.eps>
+File: /tmp/500_bigger/19571013.eps Graphic file (type eps)
+ </tmp/500_bigger/19571013.eps>
+File: /tmp/500_bigger/19571023.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571023.eps>
+File: /tmp/500_bigger/19571027.eps Graphic file (type eps)
+ </tmp/500_bigger/19571027.eps>
+File: /tmp/500_bigger/19571028.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571028.eps>
+File: /tmp/500_bigger/19571029.eps Graphic file (type eps)
+ </tmp/500_bigger/19571029.eps>
+File: /tmp/500_bigger/19571030.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571030.eps>
+File: /tmp/500_bigger/19571031.eps Graphic file (type eps)
+ </tmp/500_bigger/19571031.eps>
+File: /tmp/500_bigger/19571101.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571101.eps>
+File: /tmp/500_bigger/19571102.eps Graphic file (type eps)
+ </tmp/500_bigger/19571102.eps>
+File: /tmp/500_bigger/19571122.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571122.eps>
+File: /tmp/500_bigger/19571123.eps Graphic file (type eps)
+ </tmp/500_bigger/19571123.eps>
+File: /tmp/500_bigger/19571124.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571124.eps>
+File: /tmp/500_bigger/19571128.eps Graphic file (type eps)
+ </tmp/500_bigger/19571128.eps>
+File: /tmp/500_bigger/19571129.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571129.eps>
+File: /tmp/500_bigger/19571219.eps Graphic file (type eps)
+ </tmp/500_bigger/19571219.eps>
+File: /tmp/500_bigger/19571220.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571220.eps>
+File: /tmp/500_bigger/19571221.eps Graphic file (type eps)
+ </tmp/500_bigger/19571221.eps>
+File: /tmp/500_bigger/19571222.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571222.eps>
+File: /tmp/500_bigger/19571223.eps Graphic file (type eps)
+ </tmp/500_bigger/19571223.eps>
+File: /tmp/500_bigger/19571224.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571224.eps>
+File: /tmp/500_bigger/19571225.eps Graphic file (type eps)
+ </tmp/500_bigger/19571225.eps>
+File: /tmp/500_bigger/19571226.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571226.eps>
+File: /tmp/500_bigger/19571227.eps Graphic file (type eps)
+ </tmp/500_bigger/19571227.eps>
+File: /tmp/500_bigger/19571228.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571228.eps>
+File: /tmp/500_bigger/19571229.eps Graphic file (type eps)
+ </tmp/500_bigger/19571229.eps>
+File: /tmp/500_bigger/19571230.eps Graphic file (type eps)
+
+</tmp/500_bigger/19571230.eps>
+File: /tmp/500_bigger/19580102.eps Graphic file (type eps)
+ </tmp/500_bigger/19580102.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 1094--1214
+ [] [] [] [] [] 
+ []
+
+[16] [17]
+File: /tmp/500_bigger/19580113.eps Graphic file (type eps)
+ </tmp/500_bigger/19580113.eps>
+File: /tmp/500_bigger/19580114.eps Graphic file (type eps)
+ </tmp/500_bigger/19580114.eps>
+File: /tmp/500_bigger/19580209.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580209.eps>
+File: /tmp/500_bigger/19580210.eps Graphic file (type eps)
+ </tmp/500_bigger/19580210.eps>
+File: /tmp/500_bigger/19580226.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580226.eps>
+File: /tmp/500_bigger/19580305.eps Graphic file (type eps)
+ </tmp/500_bigger/19580305.eps>
+File: /tmp/500_bigger/19580306.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580306.eps>
+File: /tmp/500_bigger/19580307.eps Graphic file (type eps)
+ </tmp/500_bigger/19580307.eps>
+File: /tmp/500_bigger/19580308.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580308.eps>
+File: /tmp/500_bigger/19580309.eps Graphic file (type eps)
+ </tmp/500_bigger/19580309.eps>
+File: /tmp/500_bigger/19580310.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580310.eps>
+File: /tmp/500_bigger/19580311.eps Graphic file (type eps)
+ </tmp/500_bigger/19580311.eps>
+File: /tmp/500_bigger/19580324.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580324.eps>
+File: /tmp/500_bigger/19580325.eps Graphic file (type eps)
+ </tmp/500_bigger/19580325.eps>
+File: /tmp/500_bigger/19580326.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580326.eps>
+File: /tmp/500_bigger/19580327.eps Graphic file (type eps)
+ </tmp/500_bigger/19580327.eps>
+File: /tmp/500_bigger/19580328.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580328.eps>
+File: /tmp/500_bigger/19580329.eps Graphic file (type eps)
+ </tmp/500_bigger/19580329.eps>
+File: /tmp/500_bigger/19580330.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580330.eps>
+File: /tmp/500_bigger/19580331.eps Graphic file (type eps)
+ </tmp/500_bigger/19580331.eps>
+File: /tmp/500_bigger/19580401.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580401.eps>
+File: /tmp/500_bigger/19580402.eps Graphic file (type eps)
+ </tmp/500_bigger/19580402.eps>
+File: /tmp/500_bigger/19580403.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580403.eps>
+File: /tmp/500_bigger/19580404.eps Graphic file (type eps)
+ </tmp/500_bigger/19580404.eps>
+File: /tmp/500_bigger/19580405.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580405.eps>
+File: /tmp/500_bigger/19580406.eps Graphic file (type eps)
+ </tmp/500_bigger/19580406.eps>
+File: /tmp/500_bigger/19580407.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580407.eps>
+File: /tmp/500_bigger/19580408.eps Graphic file (type eps)
+ </tmp/500_bigger/19580408.eps>
+File: /tmp/500_bigger/19580428.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580428.eps>
+File: /tmp/500_bigger/19580429.eps Graphic file (type eps)
+ </tmp/500_bigger/19580429.eps>
+File: /tmp/500_bigger/19580430.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580430.eps>
+File: /tmp/500_bigger/19580502.eps Graphic file (type eps)
+ </tmp/500_bigger/19580502.eps>
+File: /tmp/500_bigger/19580503.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580503.eps>
+File: /tmp/500_bigger/19580505.eps Graphic file (type eps)
+ </tmp/500_bigger/19580505.eps>
+File: /tmp/500_bigger/19580604.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580604.eps>
+File: /tmp/500_bigger/19580705.eps Graphic file (type eps)
+ </tmp/500_bigger/19580705.eps>
+File: /tmp/500_bigger/19580710.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580710.eps>
+File: /tmp/500_bigger/19580727.eps Graphic file (type eps)
+ </tmp/500_bigger/19580727.eps>
+File: /tmp/500_bigger/19580728.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580728.eps>
+File: /tmp/500_bigger/19580730.eps Graphic file (type eps)
+ </tmp/500_bigger/19580730.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 1214--1334
+ [] [] [] [] [] 
+ []
+
+[18] [19]
+File: /tmp/500_bigger/19580731.eps Graphic file (type eps)
+ </tmp/500_bigger/19580731.eps>
+File: /tmp/500_bigger/19580801.eps Graphic file (type eps)
+ </tmp/500_bigger/19580801.eps>
+File: /tmp/500_bigger/19580830.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580830.eps>
+File: /tmp/500_bigger/19580831.eps Graphic file (type eps)
+ </tmp/500_bigger/19580831.eps>
+File: /tmp/500_bigger/19580902.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580902.eps>
+File: /tmp/500_bigger/19580903.eps Graphic file (type eps)
+ </tmp/500_bigger/19580903.eps>
+File: /tmp/500_bigger/19580908.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580908.eps>
+File: /tmp/500_bigger/19580909.eps Graphic file (type eps)
+ </tmp/500_bigger/19580909.eps>
+File: /tmp/500_bigger/19580910.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580910.eps>
+File: /tmp/500_bigger/19580914.eps Graphic file (type eps)
+ </tmp/500_bigger/19580914.eps>
+File: /tmp/500_bigger/19580915.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580915.eps>
+File: /tmp/500_bigger/19580916.eps Graphic file (type eps)
+ </tmp/500_bigger/19580916.eps>
+File: /tmp/500_bigger/19580923.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580923.eps>
+File: /tmp/500_bigger/19580926.eps Graphic file (type eps)
+ </tmp/500_bigger/19580926.eps>
+File: /tmp/500_bigger/19580928.eps Graphic file (type eps)
+
+</tmp/500_bigger/19580928.eps>
+File: /tmp/500_bigger/19581017.eps Graphic file (type eps)
+ </tmp/500_bigger/19581017.eps>
+File: /tmp/500_bigger/19581018.eps Graphic file (type eps)
+
+</tmp/500_bigger/19581018.eps>
+File: /tmp/500_bigger/19581019.eps Graphic file (type eps)
+ </tmp/500_bigger/19581019.eps>
+File: /tmp/500_bigger/19581101.eps Graphic file (type eps)
+
+</tmp/500_bigger/19581101.eps>
+File: /tmp/500_bigger/19581126.eps Graphic file (type eps)
+ </tmp/500_bigger/19581126.eps>
+File: /tmp/500_bigger/19581127.eps Graphic file (type eps)
+
+</tmp/500_bigger/19581127.eps>
+File: /tmp/500_bigger/19581128.eps Graphic file (type eps)
+ </tmp/500_bigger/19581128.eps>
+File: /tmp/500_bigger/19581130.eps Graphic file (type eps)
+
+</tmp/500_bigger/19581130.eps>
+File: /tmp/500_bigger/19581205.eps Graphic file (type eps)
+ </tmp/500_bigger/19581205.eps>
+File: /tmp/500_bigger/19581206.eps Graphic file (type eps)
+
+</tmp/500_bigger/19581206.eps>
+File: /tmp/500_bigger/19581208.eps Graphic file (type eps)
+ </tmp/500_bigger/19581208.eps>
+File: /tmp/500_bigger/19581209.eps Graphic file (type eps)
+
+</tmp/500_bigger/19581209.eps>
+File: /tmp/500_bigger/19581210.eps Graphic file (type eps)
+ </tmp/500_bigger/19581210.eps>
+File: /tmp/500_bigger/19581211.eps Graphic file (type eps)
+
+</tmp/500_bigger/19581211.eps>
+File: /tmp/500_bigger/19581213.eps Graphic file (type eps)
+ </tmp/500_bigger/19581213.eps>
+File: /tmp/500_bigger/19581214.eps Graphic file (type eps)
+
+</tmp/500_bigger/19581214.eps>
+File: /tmp/500_bigger/19581215.eps Graphic file (type eps)
+ </tmp/500_bigger/19581215.eps>
+File: /tmp/500_bigger/19581216.eps Graphic file (type eps)
+
+</tmp/500_bigger/19581216.eps>
+File: /tmp/500_bigger/19590103.eps Graphic file (type eps)
+ </tmp/500_bigger/19590103.eps>
+File: /tmp/500_bigger/19590108.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590108.eps>
+File: /tmp/500_bigger/19590109.eps Graphic file (type eps)
+ </tmp/500_bigger/19590109.eps>
+File: /tmp/500_bigger/19590120.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590120.eps>
+File: /tmp/500_bigger/19590121.eps Graphic file (type eps)
+ </tmp/500_bigger/19590121.eps>
+File: /tmp/500_bigger/19590122.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590122.eps>
+File: /tmp/500_bigger/19590123.eps Graphic file (type eps)
+ </tmp/500_bigger/19590123.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 1334--1454
+ [] [] [] [] [] 
+ []
+
+[20] [21]
+File: /tmp/500_bigger/19590124.eps Graphic file (type eps)
+ </tmp/500_bigger/19590124.eps>
+File: /tmp/500_bigger/19590125.eps Graphic file (type eps)
+ </tmp/500_bigger/19590125.eps>
+File: /tmp/500_bigger/19590217.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590217.eps>
+File: /tmp/500_bigger/19590218.eps Graphic file (type eps)
+ </tmp/500_bigger/19590218.eps>
+File: /tmp/500_bigger/19590225.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590225.eps>
+File: /tmp/500_bigger/19590318.eps Graphic file (type eps)
+ </tmp/500_bigger/19590318.eps>
+File: /tmp/500_bigger/19590319.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590319.eps>
+File: /tmp/500_bigger/19590320.eps Graphic file (type eps)
+ </tmp/500_bigger/19590320.eps>
+File: /tmp/500_bigger/19590321.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590321.eps>
+File: /tmp/500_bigger/19590322.eps Graphic file (type eps)
+ </tmp/500_bigger/19590322.eps>
+File: /tmp/500_bigger/19590323.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590323.eps>
+File: /tmp/500_bigger/19590325.eps Graphic file (type eps)
+ </tmp/500_bigger/19590325.eps>
+File: /tmp/500_bigger/19590326.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590326.eps>
+File: /tmp/500_bigger/19590327.eps Graphic file (type eps)
+ </tmp/500_bigger/19590327.eps>
+File: /tmp/500_bigger/19590328.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590328.eps>
+File: /tmp/500_bigger/19590329.eps Graphic file (type eps)
+ </tmp/500_bigger/19590329.eps>
+File: /tmp/500_bigger/19590330.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590330.eps>
+File: /tmp/500_bigger/19590410.eps Graphic file (type eps)
+ </tmp/500_bigger/19590410.eps>
+File: /tmp/500_bigger/19590411.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590411.eps>
+File: /tmp/500_bigger/19590412.eps Graphic file (type eps)
+ </tmp/500_bigger/19590412.eps>
+File: /tmp/500_bigger/19590429.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590429.eps>
+File: /tmp/500_bigger/19590430.eps Graphic file (type eps)
+ </tmp/500_bigger/19590430.eps>
+File: /tmp/500_bigger/19590509.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590509.eps>
+File: /tmp/500_bigger/19590510.eps Graphic file (type eps)
+ </tmp/500_bigger/19590510.eps>
+File: /tmp/500_bigger/19590511.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590511.eps>
+File: /tmp/500_bigger/19590512.eps Graphic file (type eps)
+ </tmp/500_bigger/19590512.eps>
+File: /tmp/500_bigger/19590513.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590513.eps>
+File: /tmp/500_bigger/19590514.eps Graphic file (type eps)
+ </tmp/500_bigger/19590514.eps>
+File: /tmp/500_bigger/19590606.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590606.eps>
+File: /tmp/500_bigger/19590607.eps Graphic file (type eps)
+ </tmp/500_bigger/19590607.eps>
+File: /tmp/500_bigger/19590624.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590624.eps>
+File: /tmp/500_bigger/19590829.eps Graphic file (type eps)
+ </tmp/500_bigger/19590829.eps>
+File: /tmp/500_bigger/19590830.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590830.eps>
+File: /tmp/500_bigger/19590831.eps Graphic file (type eps)
+ </tmp/500_bigger/19590831.eps>
+File: /tmp/500_bigger/19590901.eps Graphic file (type eps)
+
+</tmp/500_bigger/19590901.eps>
+File: /tmp/500_bigger/19590902.eps Graphic file (type eps)
+ </tmp/500_bigger/19590902.eps>
+File: /tmp/500_bigger/19591111.eps Graphic file (type eps)
+
+</tmp/500_bigger/19591111.eps>
+File: /tmp/500_bigger/19591112.eps Graphic file (type eps)
+ </tmp/500_bigger/19591112.eps>
+File: /tmp/500_bigger/19591113.eps Graphic file (type eps)
+
+</tmp/500_bigger/19591113.eps>
+File: /tmp/500_bigger/19591126.eps Graphic file (type eps)
+ </tmp/500_bigger/19591126.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 1454--1574
+ [] [] [] [] [] 
+ []
+
+[22] [23]
+File: /tmp/500_bigger/19591220.eps Graphic file (type eps)
+ </tmp/500_bigger/19591220.eps>
+File: /tmp/500_bigger/19600107.eps Graphic file (type eps)
+ </tmp/500_bigger/19600107.eps>
+File: /tmp/500_bigger/19600108.eps Graphic file (type eps)
+
+</tmp/500_bigger/19600108.eps>
+File: /tmp/500_bigger/19600109.eps Graphic file (type eps)
+ </tmp/500_bigger/19600109.eps>
+File: /tmp/500_bigger/19600127.eps Graphic file (type eps)
+
+</tmp/500_bigger/19600127.eps>
+File: /tmp/500_bigger/19600128.eps Graphic file (type eps)
+ </tmp/500_bigger/19600128.eps>
+File: /tmp/500_bigger/19600129.eps Graphic file (type eps)
+
+</tmp/500_bigger/19600129.eps>
+File: /tmp/500_bigger/19600130.eps Graphic file (type eps)
+ </tmp/500_bigger/19600130.eps>
+File: /tmp/500_bigger/19600201.eps Graphic file (type eps)
+
+</tmp/500_bigger/19600201.eps>
+File: /tmp/500_bigger/19600812.eps Graphic file (type eps)
+ </tmp/500_bigger/19600812.eps>
+File: /tmp/500_bigger/19600813.eps Graphic file (type eps)
+
+</tmp/500_bigger/19600813.eps>
+File: /tmp/500_bigger/19600814.eps Graphic file (type eps)
+ </tmp/500_bigger/19600814.eps>
+File: /tmp/500_bigger/19600815.eps Graphic file (type eps)
+
+</tmp/500_bigger/19600815.eps>
+File: /tmp/500_bigger/19600816.eps Graphic file (type eps)
+ </tmp/500_bigger/19600816.eps>
+File: /tmp/500_bigger/19600817.eps Graphic file (type eps)
+
+</tmp/500_bigger/19600817.eps>
+File: /tmp/500_bigger/19600818.eps Graphic file (type eps)
+ </tmp/500_bigger/19600818.eps>
+File: /tmp/500_bigger/19661211.eps Graphic file (type eps)
+
+</tmp/500_bigger/19661211.eps>
+File: /tmp/500_bigger/19670304.eps Graphic file (type eps)
+ </tmp/500_bigger/19670304.eps>
+File: /tmp/500_bigger/19670329.eps Graphic file (type eps)
+
+</tmp/500_bigger/19670329.eps>
+File: /tmp/500_bigger/19670528.eps Graphic file (type eps)
+ </tmp/500_bigger/19670528.eps>
+File: /tmp/500_bigger/19670529.eps Graphic file (type eps)
+
+</tmp/500_bigger/19670529.eps>
+File: /tmp/500_bigger/19670730.eps Graphic file (type eps)
+ </tmp/500_bigger/19670730.eps>
+File: /tmp/500_bigger/19670731.eps Graphic file (type eps)
+
+</tmp/500_bigger/19670731.eps>
+File: /tmp/500_bigger/19680105.eps Graphic file (type eps)
+ </tmp/500_bigger/19680105.eps>
+File: /tmp/500_bigger/19680106.eps Graphic file (type eps)
+
+</tmp/500_bigger/19680106.eps>
+File: /tmp/500_bigger/19680107.eps Graphic file (type eps)
+ </tmp/500_bigger/19680107.eps>
+File: /tmp/500_bigger/19680108.eps Graphic file (type eps)
+
+</tmp/500_bigger/19680108.eps>
+File: /tmp/500_bigger/19680109.eps Graphic file (type eps)
+ </tmp/500_bigger/19680109.eps>
+File: /tmp/500_bigger/19680110.eps Graphic file (type eps)
+
+</tmp/500_bigger/19680110.eps>
+File: /tmp/500_bigger/19680522.eps Graphic file (type eps)
+ </tmp/500_bigger/19680522.eps>
+File: /tmp/500_bigger/19690108.eps Graphic file (type eps)
+
+</tmp/500_bigger/19690108.eps>
+File: /tmp/500_bigger/19690109.eps Graphic file (type eps)
+ </tmp/500_bigger/19690109.eps>
+File: /tmp/500_bigger/19690110.eps Graphic file (type eps)
+
+</tmp/500_bigger/19690110.eps>
+File: /tmp/500_bigger/19690321.eps Graphic file (type eps)
+ </tmp/500_bigger/19690321.eps>
+File: /tmp/500_bigger/19690524.eps Graphic file (type eps)
+
+</tmp/500_bigger/19690524.eps>
+File: /tmp/500_bigger/19690525.eps Graphic file (type eps)
+ </tmp/500_bigger/19690525.eps>
+File: /tmp/500_bigger/19690607.eps Graphic file (type eps)
+
+</tmp/500_bigger/19690607.eps>
+File: /tmp/500_bigger/19690608.eps Graphic file (type eps)
+ </tmp/500_bigger/19690608.eps>
+File: /tmp/500_bigger/19690609.eps Graphic file (type eps)
+
+</tmp/500_bigger/19690609.eps>
+File: /tmp/500_bigger/19690610.eps Graphic file (type eps)
+ </tmp/500_bigger/19690610.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 1574--1694
+ [] [] [] [] [] 
+ []
+
+[24] [25]
+File: /tmp/500_bigger/19700222.eps Graphic file (type eps)
+ </tmp/500_bigger/19700222.eps>
+File: /tmp/500_bigger/19700223.eps Graphic file (type eps)
+ </tmp/500_bigger/19700223.eps>
+File: /tmp/500_bigger/19700224.eps Graphic file (type eps)
+
+</tmp/500_bigger/19700224.eps>
+File: /tmp/500_bigger/19700225.eps Graphic file (type eps)
+ </tmp/500_bigger/19700225.eps>
+File: /tmp/500_bigger/19700226.eps Graphic file (type eps)
+
+</tmp/500_bigger/19700226.eps>
+File: /tmp/500_bigger/19700410.eps Graphic file (type eps)
+ </tmp/500_bigger/19700410.eps>
+File: /tmp/500_bigger/19700411.eps Graphic file (type eps)
+
+</tmp/500_bigger/19700411.eps>
+File: /tmp/500_bigger/19700412.eps Graphic file (type eps)
+ </tmp/500_bigger/19700412.eps>
+File: /tmp/500_bigger/19700413.eps Graphic file (type eps)
+
+</tmp/500_bigger/19700413.eps>
+File: /tmp/500_bigger/19701026.eps Graphic file (type eps)
+ </tmp/500_bigger/19701026.eps>
+File: /tmp/500_bigger/19701027.eps Graphic file (type eps)
+
+</tmp/500_bigger/19701027.eps>
+File: /tmp/500_bigger/19720219.eps Graphic file (type eps)
+ </tmp/500_bigger/19720219.eps>
+File: /tmp/500_bigger/19720220.eps Graphic file (type eps)
+
+</tmp/500_bigger/19720220.eps>
+File: /tmp/500_bigger/19720221.eps Graphic file (type eps)
+ </tmp/500_bigger/19720221.eps>
+File: /tmp/500_bigger/19720222.eps Graphic file (type eps)
+
+</tmp/500_bigger/19720222.eps>
+File: /tmp/500_bigger/19730903.eps Graphic file (type eps)
+ </tmp/500_bigger/19730903.eps>
+Overfull \hbox (7.0321pt too wide) in alignment at lines 1694--1744
+ [] [] [] [] [] 
+ []
+
+[26] [27] [28] [29] (./test.aux) ) 
+Here is how much of TeX's memory you used:
+ 1839 strings out of 256217
+ 30988 string characters out of 1917094
+ 74228 words of memory out of 1500000
+ 4601 multiletter control sequences out of 10000+200000
+ 4545 words of font info for 17 fonts, out of 1200000 for 2000
+ 645 hyphenation exceptions out of 8191
+ 25i,4n,19p,199b,252s stack positions out of 5000i,500n,6000p,200000b,15000s
+
+Output written on test.dvi (29 pages, 61948 bytes).
